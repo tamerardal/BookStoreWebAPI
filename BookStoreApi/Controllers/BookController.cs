@@ -43,9 +43,10 @@ public class BookController : ControllerBase
 	// };
 	
 	[HttpGet]
-	public List<Book> GetBooks()
+	public IActionResult GetBooks()
 	{		
-		return _context.Books.OrderBy(x => x.Id).ToList<Book>();
+		GetBooksQuery query = new GetBooksQuery(_context);
+		return Ok(query.Handle());
 	}
 	
 	[HttpGet("{id}")]
