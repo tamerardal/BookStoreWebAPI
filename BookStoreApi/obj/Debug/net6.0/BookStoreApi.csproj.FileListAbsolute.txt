@@ -25,3 +25,14 @@ C:\Users\tamer\Desktop\webapipractices\book_store_api\BookStoreApi\obj\Debug\net
 C:\Users\tamer\Desktop\webapipractices\book_store_api\BookStoreApi\obj\Debug\net6.0\BookStoreApi.pdb
 C:\Users\tamer\Desktop\webapipractices\book_store_api\BookStoreApi\obj\Debug\net6.0\BookStoreApi.genruntimeconfig.cache
 C:\Users\tamer\Desktop\webapipractices\book_store_api\BookStoreApi\obj\Debug\net6.0\ref\BookStoreApi.dll
+C:\Users\tamer\Desktop\webapipractices\book_store_api\bookstoreapi\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\tamer\Desktop\webapipractices\book_store_api\bookstoreapi\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\tamer\Desktop\webapipractices\book_store_api\bookstoreapi\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.InMemory.dll
+C:\Users\tamer\Desktop\webapipractices\book_store_api\bookstoreapi\bin\Debug\net6.0\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\tamer\Desktop\webapipractices\book_store_api\bookstoreapi\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\tamer\Desktop\webapipractices\book_store_api\bookstoreapi\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\tamer\Desktop\webapipractices\book_store_api\bookstoreapi\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\tamer\Desktop\webapipractices\book_store_api\bookstoreapi\bin\Debug\net6.0\Microsoft.Extensions.Logging.dll
+C:\Users\tamer\Desktop\webapipractices\book_store_api\bookstoreapi\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\tamer\Desktop\webapipractices\book_store_api\bookstoreapi\bin\Debug\net6.0\Microsoft.Extensions.Options.dll
+C:\Users\tamer\Desktop\webapipractices\book_store_api\bookstoreapi\bin\Debug\net6.0\Microsoft.Extensions.Primitives.dll
