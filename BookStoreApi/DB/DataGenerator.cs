@@ -14,7 +14,7 @@ public class DataGenerator
 			context.Books.AddRange(
 				new Book
 				{
-					Id = 1,
+					//Id = 1,
 					Title = "Book of 5 Rings",
 					Author = "Miyamoto Musashi",
 					GenreId = 5, //	Philosophy
@@ -23,7 +23,7 @@ public class DataGenerator
 				},
 				new Book
 				{
-					Id = 2,
+					//Id = 2,
 					Title = "Meditations",
 					Author = "Marcus Aurelius",
 					GenreId = 5, //	Philosophy
@@ -32,7 +32,7 @@ public class DataGenerator
 				},
 				new Book
 				{
-					Id = 3,
+					//Id = 3,
 					Title = "Dune",
 					Author = "Frank Herbert",
 					GenreId = 2, //	Science-Fiction

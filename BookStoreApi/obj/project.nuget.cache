@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "anWhd77eKij0nisHPFa5yZC8zefuKjmNwqqGSMBonT+nLF7R9Mw1YJR/0p386IXPwnqFN2trbpFFWbViq/v2GA==",
+  "dgSpecHash": "o1Ddeq2na9rnl/1mQ9UZ4OsD4Wi5yXSEjgnVhggdD7ZME8/VkGTLkGzSNiQ+GsCj4BRcB/aT+gdKxoHL9DgOig==",
   "success": true,
-  "projectFilePath": "C:\\Users\\tamer\\Desktop\\webapipractices\\book_store_api\\bookstoreapi\\BookStoreApi.csproj",
+  "projectFilePath": "C:\\Users\\tamer\\Desktop\\webapipractices\\book_store_api\\BookStoreApi\\BookStoreApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\tamer\\.nuget\\packages\\microsoft.entityframeworkcore\\8.0.0-preview.1.23111.4\\microsoft.entityframeworkcore.8.0.0-preview.1.23111.4.nupkg.sha512",
     "C:\\Users\\tamer\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\8.0.0-preview.1.23111.4\\microsoft.entityframeworkcore.abstractions.8.0.0-preview.1.23111.4.nupkg.sha512",

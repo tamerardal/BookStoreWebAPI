@@ -6,7 +6,7 @@ public class BookController : ControllerBase
 {
 	private readonly BookStoreDbContext? _context; // readonly uygulama içerisinden değiştirilemez. Sadece constructor üzerinden değiştirilebilir.
 	
-	private BookController(BookStoreDbContext context)
+	public BookController(BookStoreDbContext context)
 	{
 		_context = context;
 	}
