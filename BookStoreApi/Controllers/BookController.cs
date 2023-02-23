@@ -4,64 +4,72 @@ using Microsoft.AspNetCore.Mvc;
 [Route("[controller]s")]
 public class BookController : ControllerBase 
 {
-	private static List<Book> BookList = new List<Book>()
+	private readonly BookStoreDbContext? _context; // readonly uygulama içerisinden değiştirilemez. Sadece constructor üzerinden değiştirilebilir.
+	
+	private BookController(BookStoreDbContext context)
 	{
-		new Book
-		{
-			Id = 1,
-			Title = "Book of 5 Rings",
-			Author = "Miyamoto Musashi",
-			GenreId = 5, //	Philosophy
-			PageCount = 128,
-			PublishDate = new DateTime(1645, 1, 1),
-		},
-		new Book
-		{
-			Id = 2,
-			Title = "Meditations",
-			Author = "Marcus Aurelius",
-			GenreId = 5, //	Philosophy
-			PageCount = 112,
-			PublishDate = new DateTime(54, 1, 1),
-		},
-		new Book
-		{
-			Id = 3,
-			Title = "Dune",
-			Author = "Frank Herbert",
-			GenreId = 2, //	Science-Fiction
-			PageCount = 879,
-			PublishDate = new DateTime(2001, 1, 1),
-		}
-	};
+		_context = context;
+	}
+	
+	// private static List<Book> BookList = new List<Book>()
+	// {
+	// 	new Book
+	// 	{
+	// 		Id = 1,
+	// 		Title = "Book of 5 Rings",
+	// 		Author = "Miyamoto Musashi",
+	// 		GenreId = 5, //	Philosophy
+	// 		PageCount = 128,
+	// 		PublishDate = new DateTime(1645, 1, 1),
+	// 	},
+	// 	new Book
+	// 	{
+	// 		Id = 2,
+	// 		Title = "Meditations",
+	// 		Author = "Marcus Aurelius",
+	// 		GenreId = 5, //	Philosophy
+	// 		PageCount = 112,
+	// 		PublishDate = new DateTime(54, 1, 1),
+	// 	},
+	// 	new Book
+	// 	{
+	// 		Id = 3,
+	// 		Title = "Dune",
+	// 		Author = "Frank Herbert",
+	// 		GenreId = 2, //	Science-Fiction
+	// 		PageCount = 879,
+	// 		PublishDate = new DateTime(2001, 1, 1),
+	// 	}
+	// };
 	
 	[HttpGet]
 	public List<Book> GetBooks()
 	{		
-		return BookList.OrderBy(x => x.Id).ToList<Book>();
+		return _context.Books.OrderBy(x => x.Id).ToList<Book>();
 	}
 	
 	[HttpGet("{id}")]
 	public Book GetById(int id)
 	{
-		return BookList.Where(book => book.Id == id).SingleOrDefault();
+		return _context.Books.Where(book => book.Id == id).SingleOrDefault();
 	}
 	
 	[HttpPost]
 	public IActionResult AddBook([FromBody] Book newBook)
 	{
-		if((BookList.Find(x => x.Title == newBook.Title)) is not null)
+		if((_context.Books.SingleOrDefault(x => x.Title == newBook.Title)) is not null)
 		{
 			return BadRequest();
 		} 
-		BookList.Add(newBook);
+		_context.Books.Add(newBook);
+		_context.SaveChanges();
 		return Ok();
 	}
 	
 	[HttpPut("{id}")]
 	public IActionResult UpdateResult(int id, [FromBody] Book updatedBook)
 	{
-		var book = BookList.Find(x => x.Id == id);
+		var book = _context.Books.SingleOrDefault(x => x.Id == id);
 		if(book is null)
 		{
 			return BadRequest();
@@ -73,20 +81,22 @@ public class BookController : ControllerBase
 		book.Title = updatedBook.Title != default ? updatedBook.Title : book.Title;
 		book.PublishDate = updatedBook.PublishDate != default ? updatedBook.PublishDate : book.PublishDate;
 		
+		_context.SaveChanges();
 		return Ok();
 	}
 	
 	[HttpDelete("{id}")]
 	public IActionResult DeleteResult(int id)
 	{
-		var book = BookList.Find(x => x.Id == id);
+		var book = _context.Books.SingleOrDefault(x => x.Id == id);
 		
 		if (book is null)
 		{
 			return BadRequest();
 		}
 		
-		BookList.Remove(book);
+		_context.Books.Remove(book);
+		_context.SaveChanges();
 		
 		return Ok();
 	}
