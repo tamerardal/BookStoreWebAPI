@@ -1,6 +1,6 @@
 public enum GenreEnum
 {
-	PersonalGrowth,
+	PersonalGrowth = 1,
 	ScienceFiction,
 	Novel,
 	Drama,
