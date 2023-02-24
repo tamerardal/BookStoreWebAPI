@@ -1,3 +1,4 @@
+using System.ComponentModel.DataAnnotations;
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 
@@ -6,13 +7,12 @@ public class CreateBookCommand
 	public CreateBookVModel Model { get; set; }
 	private readonly BookStoreDbContext _dbContext;
 	private readonly IMapper _mapper;
-
-    public CreateBookCommand(BookStoreDbContext dbContext, IMapper mapper)
-    {
-        _dbContext = dbContext;
-        _mapper = mapper;
-    }
-    public void Handle()
+	public CreateBookCommand(BookStoreDbContext dbContext, IMapper mapper)
+	{
+		_dbContext = dbContext;
+		_mapper = mapper;
+	}
+	public void Handle()
 	{
 		var book = _dbContext.Books.SingleOrDefault(x => x.Title == Model.Title);
 		if (book is not null)

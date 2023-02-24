@@ -1,4 +1,6 @@
 using AutoMapper;
+using FluentValidation;
+using FluentValidation.Results;
 using Microsoft.AspNetCore.Mvc;
 using static CreateBookCommand;
 
@@ -30,6 +32,8 @@ public class BookController : ControllerBase
 		try
 		{
 			query.BookId = id;
+			GetBookDetailQueryValidator validator = new GetBookDetailQueryValidator();
+			validator.ValidateAndThrow(query);
 		}
 		catch (Exception ex)
 		{
@@ -48,7 +52,15 @@ public class BookController : ControllerBase
 		try
 		{
 			command.Model = newBook;
+			CreateBookCommandValidator validator = new CreateBookCommandValidator();
+			validator.ValidateAndThrow(command);
+			
+			// if (!result.IsValid)
+			// 	foreach (var failure in result.Errors)
+			// 		Console.WriteLine("Property " + failure.PropertyName + " failed validation. Error was: " + failure.ErrorMessage);
+			// else
 			command.Handle();
+				
 		}
 		catch (Exception ex)
 		{
@@ -59,14 +71,18 @@ public class BookController : ControllerBase
 	}
 	
 	[HttpPut("{id}")]
-	public IActionResult UpdateResult(int id, [FromBody] UpdateBookVModel updatedBook)
+	public IActionResult UpdateResult(int id, [FromBody] UpdateBookModel updatedBook)
 	{
 		
 		try
 		{
-			UpdateBookCommand command = new UpdateBookCommand(_context);
-			command.BookId = id;
+			UpdateBookCommand command = new UpdateBookCommand(_context, _mapper);
 			command.Model = updatedBook;
+			command.BookId = id;
+			
+			UpdateBookCommandValidator validator = new UpdateBookCommandValidator();
+			validator.ValidateAndThrow(command);
+
 			command.Handle();
 		}
 		catch (Exception ex)
@@ -85,6 +101,10 @@ public class BookController : ControllerBase
 		{
 			DeleteBookCommand command = new DeleteBookCommand(_context);
 			command.BookId = id;
+			
+			DeleteBookCommandValidator validator = new DeleteBookCommandValidator();
+			validator.ValidateAndThrow(command);
+			
 			command.Handle();
 		}
 		catch (Exception ex)
