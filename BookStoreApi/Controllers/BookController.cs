@@ -7,7 +7,7 @@ using static CreateBookCommand;
 [Route("[controller]s")]
 public class BookController : ControllerBase 
 {
-	private readonly BookStoreDbContext? _context; // readonly uygulama içerisinden değiştirilemez. Sadece constructor üzerinden değiştirilebilir.
+	private readonly BookStoreDbContext _context; // readonly uygulama içerisinden değiştirilemez. Sadece constructor üzerinden değiştirilebilir.
 	private readonly IMapper _mapper;
 	public BookController(BookStoreDbContext context, IMapper mapper)
 	{
