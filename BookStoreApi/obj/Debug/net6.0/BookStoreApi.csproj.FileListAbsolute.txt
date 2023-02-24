@@ -43,3 +43,4 @@ C:\Users\tamer\Desktop\webapipractices\book_store_api\BookStoreApi\obj\Debug\net
 C:\Users\tamer\Desktop\webapipractices\book_store_api\BookStoreApi\obj\Debug\net6.0\staticwebassets.pack.json
 C:\Users\tamer\Desktop\webapipractices\book_store_api\bookstoreapi\bin\Debug\net6.0\AutoMapper.dll
 C:\Users\tamer\Desktop\webapipractices\book_store_api\bookstoreapi\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\tamer\Desktop\webapipractices\book_store_api\bookstoreapi\bin\Debug\net6.0\FluentValidation.dll
