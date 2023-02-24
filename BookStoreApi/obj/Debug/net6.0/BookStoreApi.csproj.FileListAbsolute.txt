@@ -36,3 +36,8 @@ C:\Users\tamer\Desktop\webapipractices\book_store_api\bookstoreapi\bin\Debug\net
 C:\Users\tamer\Desktop\webapipractices\book_store_api\bookstoreapi\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
 C:\Users\tamer\Desktop\webapipractices\book_store_api\bookstoreapi\bin\Debug\net6.0\Microsoft.Extensions.Options.dll
 C:\Users\tamer\Desktop\webapipractices\book_store_api\bookstoreapi\bin\Debug\net6.0\Microsoft.Extensions.Primitives.dll
+C:\Users\tamer\Desktop\webapipractices\book_store_api\BookStoreApi\obj\Debug\net6.0\staticwebassets\msbuild.BookStoreApi.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\tamer\Desktop\webapipractices\book_store_api\BookStoreApi\obj\Debug\net6.0\staticwebassets\msbuild.build.BookStoreApi.props
+C:\Users\tamer\Desktop\webapipractices\book_store_api\BookStoreApi\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.BookStoreApi.props
+C:\Users\tamer\Desktop\webapipractices\book_store_api\BookStoreApi\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.BookStoreApi.props
+C:\Users\tamer\Desktop\webapipractices\book_store_api\BookStoreApi\obj\Debug\net6.0\staticwebassets.pack.json
