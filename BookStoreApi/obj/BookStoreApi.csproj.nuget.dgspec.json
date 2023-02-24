@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\tamer\\Desktop\\webapipractices\\book_store_api\\BookStoreApi\\BookStoreApi.csproj": {}
+    "C:\\Users\\tamer\\Desktop\\webapipractices\\book_store_api\\bookstoreapi\\BookStoreApi.csproj": {}
   },
   "projects": {
-    "c:\\Users\\tamer\\Desktop\\webapipractices\\book_store_api\\BookStoreApi\\BookStoreApi.csproj": {
+    "C:\\Users\\tamer\\Desktop\\webapipractices\\book_store_api\\bookstoreapi\\BookStoreApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\tamer\\Desktop\\webapipractices\\book_store_api\\BookStoreApi\\BookStoreApi.csproj",
+        "projectUniqueName": "C:\\Users\\tamer\\Desktop\\webapipractices\\book_store_api\\bookstoreapi\\BookStoreApi.csproj",
         "projectName": "BookStoreApi",
-        "projectPath": "c:\\Users\\tamer\\Desktop\\webapipractices\\book_store_api\\BookStoreApi\\BookStoreApi.csproj",
+        "projectPath": "C:\\Users\\tamer\\Desktop\\webapipractices\\book_store_api\\bookstoreapi\\BookStoreApi.csproj",
         "packagesPath": "C:\\Users\\tamer\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\tamer\\Desktop\\webapipractices\\book_store_api\\BookStoreApi\\obj\\",
+        "outputPath": "C:\\Users\\tamer\\Desktop\\webapipractices\\book_store_api\\bookstoreapi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
