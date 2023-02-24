@@ -18,14 +18,14 @@ public class BookController : ControllerBase
 	[HttpGet]
 	public IActionResult GetBooks()
 	{		
-		GetBooksQuery query = new GetBooksQuery(_context);
+		GetBooksQuery query = new GetBooksQuery(_context, _mapper);
 		return Ok(query.Handle());
 	}
 	
 	[HttpGet("{id}")]
 	public IActionResult GetById(int id)
 	{
-		GetBookDetailQuery query = new GetBookDetailQuery(_context);
+		GetBookDetailQuery query = new GetBookDetailQuery(_context, _mapper);
 		
 		try
 		{
@@ -41,7 +41,7 @@ public class BookController : ControllerBase
 	}
 	
 	[HttpPost]
-	public IActionResult AddBook([FromBody] CreateBookModel newBook)
+	public IActionResult AddBook([FromBody] CreateBookVModel newBook)
 	{
 		CreateBookCommand command = new CreateBookCommand(_context, _mapper);
 		
@@ -59,7 +59,7 @@ public class BookController : ControllerBase
 	}
 	
 	[HttpPut("{id}")]
-	public IActionResult UpdateResult(int id, [FromBody] UpdateBookModel updatedBook)
+	public IActionResult UpdateResult(int id, [FromBody] UpdateBookVModel updatedBook)
 	{
 		
 		try

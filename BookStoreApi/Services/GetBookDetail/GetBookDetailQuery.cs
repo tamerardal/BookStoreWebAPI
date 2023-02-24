@@ -1,27 +1,31 @@
+using AutoMapper;
+
 public class GetBookDetailQuery
 {
 	public BookDetailViewModel Model { get; set; }
 	public int BookId { get; set; }
 	
 	private readonly BookStoreDbContext _dbContext;
-	public GetBookDetailQuery(BookStoreDbContext dbContext)
-	{
-		_dbContext = dbContext;
-	}
-	public BookDetailViewModel Handle()
+	private readonly IMapper _mapper;
+    public GetBookDetailQuery(BookStoreDbContext dbContext, IMapper mapper)
+    {
+        _dbContext = dbContext;
+        _mapper = mapper;
+    }
+    public BookDetailViewModel Handle()
 	{
 		var book = _dbContext.Books.SingleOrDefault(book => book.Id == BookId);
 		if (book is null)
 		{
 			throw new InvalidOperationException("ID's not correct!");
 		}
-		BookDetailViewModel vm = new BookDetailViewModel();
+		BookDetailViewModel vm = _mapper.Map<BookDetailViewModel>(book); //new BookDetailViewModel();
 		
-		vm.Title = book.Title;
-		vm.Author = book.Author;
-		vm.Genre = ((GenreEnum)book.GenreId).ToString();
-		vm.PublishDate = book.PublishDate.Date.ToString("dd/MM/yyyy");
-		vm.PageCount = book.PageCount;
+		// vm.Title = book.Title;
+		// vm.Author = book.Author;
+		// vm.Genre = ((GenreEnum)book.GenreId).ToString();
+		// vm.PublishDate = book.PublishDate.Date.ToString("dd/MM/yyyy");
+		// vm.PageCount = book.PageCount;
 		
 		return vm;
 		

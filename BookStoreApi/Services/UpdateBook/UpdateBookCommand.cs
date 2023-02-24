@@ -2,7 +2,7 @@ public class UpdateBookCommand
 {
 	private readonly BookStoreDbContext _dbContext;
 	public int BookId { get; set; }
-	public UpdateBookModel Model;
+	public UpdateBookVModel Model;
 	public UpdateBookCommand(BookStoreDbContext dbContext)
 	{
 		_dbContext = dbContext;
@@ -16,6 +16,8 @@ public class UpdateBookCommand
 			throw new InvalidOperationException("Book doesn't exist!");
 		}
 		
+		book = new Book();
+		
 		book.GenreId = Model.GenreId != default ? Model.GenreId : book.GenreId;
 		book.Author = Model.Author != default ? Model.Author : book.Author;
 		book.PageCount = Model.PageCount != default ? Model.PageCount : book.PageCount;
@@ -27,7 +29,7 @@ public class UpdateBookCommand
 	}
 }
 
-public class UpdateBookModel
+public class UpdateBookVModel
 {
 	public string? Title { get; set; }
 	public int GenreId { get; set; }

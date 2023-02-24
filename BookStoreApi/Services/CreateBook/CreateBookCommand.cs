@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 
 public class CreateBookCommand
 {
-	public CreateBookModel Model { get; set; }
+	public CreateBookVModel Model { get; set; }
 	private readonly BookStoreDbContext _dbContext;
 	private readonly IMapper _mapper;
 
@@ -30,7 +30,7 @@ public class CreateBookCommand
 		_dbContext.SaveChanges();
 
 	}
-	public class CreateBookModel
+	public class CreateBookVModel
 	{
 		public string? Title { get; set; }
 		public string? Author { get; set; }
