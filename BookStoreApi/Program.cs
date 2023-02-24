@@ -1,3 +1,4 @@
+using AutoMapper;
 using Microsoft.EntityFrameworkCore;
 
 internal class Program
@@ -23,7 +24,6 @@ internal class Program
 			var services = scope.ServiceProvider;
 			DataGenerator.Initialize(services);
 		}
-
 		// Configure the HTTP request pipeline.
 		if (app.Environment.IsDevelopment())
 		{
