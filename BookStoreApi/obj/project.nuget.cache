@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "CLHjtu20I61zQgcotkggzkK2GVdOCNSf9XcRzJo4QX53XoNDaPLA6UqcBlE/Tln+ZRm0eHcAIjbtiYrSBYVwuw==",
+  "dgSpecHash": "XM9CrrEDT3nTPM6L0u1Okfi0mxD81iS8SBrxgy+TQkav2JoN2nMwq9WPwu95rMhxNWzHJJEAyTpn/tU7Esxt4g==",
   "success": true,
   "projectFilePath": "C:\\Users\\tamer\\Desktop\\webapipractices\\book_store_api\\bookstoreapi\\BookStoreApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\tamer\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
+    "C:\\Users\\tamer\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.0\\automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",
     "C:\\Users\\tamer\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\tamer\\.nuget\\packages\\microsoft.entityframeworkcore\\8.0.0-preview.1.23111.4\\microsoft.entityframeworkcore.8.0.0-preview.1.23111.4.nupkg.sha512",
     "C:\\Users\\tamer\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\8.0.0-preview.1.23111.4\\microsoft.entityframeworkcore.abstractions.8.0.0-preview.1.23111.4.nupkg.sha512",
