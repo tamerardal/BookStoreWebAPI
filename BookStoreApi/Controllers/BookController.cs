@@ -1,47 +1,19 @@
+using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using static CreateBookCommand;
+
 
 [ApiController]
 [Route("[controller]s")]
 public class BookController : ControllerBase 
 {
 	private readonly BookStoreDbContext? _context; // readonly uygulama içerisinden değiştirilemez. Sadece constructor üzerinden değiştirilebilir.
-	
-	public BookController(BookStoreDbContext context)
+	private readonly IMapper _mapper;
+	public BookController(BookStoreDbContext context, IMapper mapper)
 	{
 		_context = context;
+		_mapper = mapper;
 	}
-	
-	// private static List<Book> BookList = new List<Book>()
-	// {
-	// 	new Book
-	// 	{
-	// 		Id = 1,
-	// 		Title = "Book of 5 Rings",
-	// 		Author = "Miyamoto Musashi",
-	// 		GenreId = 5, //	Philosophy
-	// 		PageCount = 128,
-	// 		PublishDate = new DateTime(1645, 1, 1),
-	// 	},
-	// 	new Book
-	// 	{
-	// 		Id = 2,
-	// 		Title = "Meditations",
-	// 		Author = "Marcus Aurelius",
-	// 		GenreId = 5, //	Philosophy
-	// 		PageCount = 112,
-	// 		PublishDate = new DateTime(54, 1, 1),
-	// 	},
-	// 	new Book
-	// 	{
-	// 		Id = 3,
-	// 		Title = "Dune",
-	// 		Author = "Frank Herbert",
-	// 		GenreId = 2, //	Science-Fiction
-	// 		PageCount = 879,
-	// 		PublishDate = new DateTime(2001, 1, 1),
-	// 	}
-	// };
 	
 	[HttpGet]
 	public IActionResult GetBooks()
@@ -71,7 +43,7 @@ public class BookController : ControllerBase
 	[HttpPost]
 	public IActionResult AddBook([FromBody] CreateBookModel newBook)
 	{
-		CreateBookCommand command = new CreateBookCommand(_context);
+		CreateBookCommand command = new CreateBookCommand(_context, _mapper);
 		
 		try
 		{
