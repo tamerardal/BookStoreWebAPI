@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using static CreateBookCommand;
 
 [ApiController]
 [Route("[controller]s")]
@@ -56,14 +57,20 @@ public class BookController : ControllerBase
 	}
 	
 	[HttpPost]
-	public IActionResult AddBook([FromBody] Book newBook)
+	public IActionResult AddBook([FromBody] CreateBookModel newBook)
 	{
-		if((_context.Books.SingleOrDefault(x => x.Title == newBook.Title)) is not null)
+		CreateBookCommand command = new CreateBookCommand(_context);
+		
+		try
 		{
-			return BadRequest();
-		} 
-		_context.Books.Add(newBook);
-		_context.SaveChanges();
+			command.Model = newBook;
+			command.Handle();
+		}
+		catch (Exception ex)
+		{
+			return BadRequest(ex.Message);
+		}
+
 		return Ok();
 	}
 	
