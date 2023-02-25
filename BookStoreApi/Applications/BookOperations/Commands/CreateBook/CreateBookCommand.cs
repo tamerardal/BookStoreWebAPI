@@ -2,7 +2,7 @@ using System.ComponentModel.DataAnnotations;
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 
-namespace BookStoreApi.Applications.BookOperations.CreateBook
+namespace BookStoreApi.Applications.BookOperations.Commands.CreateBook
 {
     public class CreateBookCommand
     {

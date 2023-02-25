@@ -1,6 +1,6 @@
 using AutoMapper;
 
-namespace BookStoreApi.Applications.BookOperations.UpdateBook
+namespace BookStoreApi.Applications.BookOperations.Commands.UpdateBook
 {
     public class UpdateBookCommand
     {

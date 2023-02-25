@@ -1,6 +1,6 @@
 using AutoMapper;
 
-namespace BookStoreApi.Applications.BookOperations.GetBooks
+namespace BookStoreApi.Applications.BookOperations.Commands.GetBooks
 {
     public class GetBooksQuery
     {
