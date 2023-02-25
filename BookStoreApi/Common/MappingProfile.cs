@@ -1,8 +1,8 @@
 using AutoMapper;
-using BookStoreApi.BookOperations.CreateBook;
-using BookStoreApi.BookOperations.GetBookDetail;
-using BookStoreApi.BookOperations.GetBooks;
-using BookStoreApi.BookOperations.UpdateBook;
+using BookStoreApi.Applications.BookOperations.CreateBook;
+using BookStoreApi.Applications.BookOperations.GetBookDetail;
+using BookStoreApi.Applications.BookOperations.GetBooks;
+using BookStoreApi.Applications.BookOperations.UpdateBook;
 
 namespace BookStoreApi.Common
 {
