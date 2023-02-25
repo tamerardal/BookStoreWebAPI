@@ -1,6 +1,4 @@
-using System.ComponentModel.DataAnnotations;
 using AutoMapper;
-using Microsoft.AspNetCore.Mvc;
 
 namespace BookStoreApi.Applications.BookOperations.Commands.CreateBook
 {

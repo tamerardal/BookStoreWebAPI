@@ -20,13 +20,7 @@ namespace BookStoreApi.Applications.BookOperations.Commands.UpdateBook
             if (book is null)
                 throw new InvalidOperationException("Book doesn't exist!");
 
-
             _mapper.Map(Model, book);
-            // book.GenreId = Model.GenreId != default ? Model.GenreId : book.GenreId;
-            // book.Author = Model.Author != default ? Model.Author : book.Author;
-            // book.PageCount = Model.PageCount != default ? Model.PageCount : book.PageCount;
-            // book.Title = Model.Title != default ? Model.Title : book.Title;
-            // book.PublishDate = Model.PublishDate != default ? Model.PublishDate : book.PublishDate;
 
             _dbContext.SaveChanges();
 
