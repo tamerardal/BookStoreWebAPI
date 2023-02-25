@@ -1,4 +1,5 @@
 using AutoMapper;
+using FluentValidation;
 using Microsoft.AspNetCore.Mvc;
 using static CreateGenreCommand;
 
@@ -28,6 +29,9 @@ public class GenreController : ControllerBase
 		GetGenreDetailQuery query = new GetGenreDetailQuery(_dbContext, _mapper);
 		query.GenreId = id;
 		
+		GetGenreDetailQueryValidator validator = new GetGenreDetailQueryValidator();
+		validator.ValidateAndThrow(query);
+		
 		return Ok(query.Handle());
 	}
 	
@@ -35,8 +39,11 @@ public class GenreController : ControllerBase
 	public IActionResult AddGenre([FromBody] CreateGenreViewModel newGenre)
 	{
 		CreateGenreCommand command = new CreateGenreCommand(_dbContext, _mapper);
-		
 		command.Model = newGenre;
+		
+		CreateGenreCommandValidator validator = new CreateGenreCommandValidator();
+		validator.ValidateAndThrow(command);
+		
 		command.Handle();
 
 		return Ok();
@@ -49,6 +56,9 @@ public class GenreController : ControllerBase
 		
 		command.GenreId = id;
 		command.Model = updatedGenre;
+		
+		UpdateGenreCommandValidator validator = new UpdateGenreCommandValidator();
+		validator.ValidateAndThrow(command);
 		
 		command.Handle();
 		
