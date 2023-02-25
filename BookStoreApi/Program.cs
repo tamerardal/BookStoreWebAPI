@@ -38,6 +38,8 @@ internal class Program
 		app.UseHttpsRedirection();
 
 		app.UseAuthorization();
+		
+		app.UseCustomExceptionMiddleware();
 
 		app.MapControllers();
 
