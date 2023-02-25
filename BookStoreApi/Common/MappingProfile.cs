@@ -6,6 +6,7 @@ using BookStoreApi.Applications.BookOperations.Commands.UpdateBook;
 using static CreateGenreCommand;
 using static GetGenreDetailQuery;
 using static GetGenresQuery;
+using static UpdateGenreCommand;
 
 namespace BookStoreApi.Common
 {
