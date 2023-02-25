@@ -1,8 +1,13 @@
 using AutoMapper;
+using BookStoreApi.BookOperations.CreateBook;
+using BookStoreApi.BookOperations.DeleteBook;
+using BookStoreApi.BookOperations.GetBookDetail;
+using BookStoreApi.BookOperations.GetBooks;
+using BookStoreApi.BookOperations.UpdateBook;
 using FluentValidation;
 using FluentValidation.Results;
 using Microsoft.AspNetCore.Mvc;
-using static CreateBookCommand;
+using static BookStoreApi.BookOperations.CreateBook.CreateBookCommand;
 
 
 [ApiController]
@@ -45,7 +50,7 @@ public class BookController : ControllerBase
 	}
 	
 	[HttpPost]
-	public IActionResult AddBook([FromBody] CreateBookVModel newBook)
+	public IActionResult AddBook([FromBody] CreateBookViewModel newBook)
 	{
 		CreateBookCommand command = new CreateBookCommand(_context, _mapper);
 		
@@ -71,7 +76,7 @@ public class BookController : ControllerBase
 	}
 	
 	[HttpPut("{id}")]
-	public IActionResult UpdateResult(int id, [FromBody] UpdateBookModel updatedBook)
+	public IActionResult UpdateResult(int id, [FromBody] UpdateBookViewModel updatedBook)
 	{
 		
 		try

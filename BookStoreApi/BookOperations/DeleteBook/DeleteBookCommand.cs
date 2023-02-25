@@ -1,21 +1,24 @@
-public class DeleteBookCommand
+namespace BookStoreApi.BookOperations.DeleteBook
 {
-	private readonly BookStoreDbContext _dbContext;
-	public int BookId { get; set; }
-	
-	public DeleteBookCommand(BookStoreDbContext dbContext)
-	{
-		_dbContext = dbContext;
-	}
-	public void Handle()
-	{
-		var book = _dbContext.Books.SingleOrDefault(book => book.Id == BookId);
-		
-		if (book is null)
-			throw new InvalidOperationException("Book doesn't exist!");
+    public class DeleteBookCommand
+    {
+        private readonly BookStoreDbContext _dbContext;
+        public int BookId { get; set; }
 
-		
-		_dbContext.Books.Remove(book);
-		_dbContext.SaveChanges();
-	}
+        public DeleteBookCommand(BookStoreDbContext dbContext)
+        {
+            _dbContext = dbContext;
+        }
+        public void Handle()
+        {
+            var book = _dbContext.Books.SingleOrDefault(book => book.Id == BookId);
+
+            if (book is null)
+                throw new InvalidOperationException("Book doesn't exist!");
+
+
+            _dbContext.Books.Remove(book);
+            _dbContext.SaveChanges();
+        }
+    }
 }

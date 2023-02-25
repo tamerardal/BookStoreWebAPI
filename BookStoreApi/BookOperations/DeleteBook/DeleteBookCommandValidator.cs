@@ -1,9 +1,12 @@
 using FluentValidation;
 
-public class DeleteBookCommandValidator : AbstractValidator<DeleteBookCommand> 
+namespace BookStoreApi.BookOperations.DeleteBook
 {
-	public DeleteBookCommandValidator()
+    public class DeleteBookCommandValidator : AbstractValidator<DeleteBookCommand>
     {
-    	RuleFor(command => command.BookId).NotEmpty().GreaterThan(0);
+        public DeleteBookCommandValidator()
+        {
+            RuleFor(command => command.BookId).NotEmpty().GreaterThan(0);
+        }
     }
 }

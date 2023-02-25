@@ -1,9 +1,12 @@
 using FluentValidation;
 
-public class GetBookDetailQueryValidator : AbstractValidator<GetBookDetailQuery>
+namespace BookStoreApi.BookOperations.GetBookDetail
 {
-	public GetBookDetailQueryValidator()
+    public class GetBookDetailQueryValidator : AbstractValidator<GetBookDetailQuery>
     {
-    	RuleFor(command => command.BookId).NotEmpty().GreaterThan(0);
+        public GetBookDetailQueryValidator()
+        {
+            RuleFor(command => command.BookId).NotEmpty().GreaterThan(0);
+        }
     }
 }
