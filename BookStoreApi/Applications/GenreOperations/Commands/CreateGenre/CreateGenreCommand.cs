@@ -14,7 +14,7 @@ public class CreateGenreCommand
 	{
 		var genre = _dbContext.Genres.SingleOrDefault(g => g.Name == Model.Name);
 		
-		if (genre.Name is not null)
+		if (genre is not null)
 			throw new InvalidOperationException("Genre is already added!");
 		
 		genre = _mapper.Map<Genre>(Model);

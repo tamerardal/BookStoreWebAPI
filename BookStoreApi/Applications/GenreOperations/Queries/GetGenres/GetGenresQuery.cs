@@ -13,7 +13,7 @@ public class GetGenresQuery
 
 	public List<GenreViewModel> Handle()
 	{
-		var genreList = _dbContext.Genres.Where(g => g.IsActive == true).OrderBy(g => g.Name).ToList();
+		var genreList = _dbContext.Genres.Where(g => g.IsActive == true).OrderBy(g => g.Id).ToList();
 		List<GenreViewModel> viewModel = _mapper.Map<List<GenreViewModel>>(genreList);
 		
 		return viewModel;
@@ -21,7 +21,7 @@ public class GetGenresQuery
 	
 	public class GenreViewModel
 	{
-		public int GenreId { get; set; }
+		public int Id { get; set; }
 		public string? Name { get; set; }
 	}
 }
