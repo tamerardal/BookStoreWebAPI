@@ -1,4 +1,4 @@
-namespace BookStoreApi.BookOperations.DeleteBook
+namespace BookStoreApi.Applications.BookOperations.DeleteBook
 {
     public class DeleteBookCommand
     {

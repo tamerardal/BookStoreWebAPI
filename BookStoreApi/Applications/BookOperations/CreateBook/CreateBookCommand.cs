@@ -2,7 +2,7 @@ using System.ComponentModel.DataAnnotations;
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 
-namespace BookStoreApi.BookOperations.CreateBook
+namespace BookStoreApi.Applications.BookOperations.CreateBook
 {
     public class CreateBookCommand
     {
@@ -21,12 +21,7 @@ namespace BookStoreApi.BookOperations.CreateBook
             {
                 throw new InvalidOperationException("Book is already added!");
             }
-            book = _mapper.Map<Book>(Model); //new Book();
-                                             // book.Title = Model.Title;
-                                             // book.Author = Model.Author;
-                                             // book.GenreId = Model.GenreId;
-                                             // book.PublishDate = Model.PublishDate;
-                                             // book.PageCount = Model.PageCount;
+            book = _mapper.Map<Book>(Model); 
 
             _dbContext.Books.Add(book);
             _dbContext.SaveChanges();

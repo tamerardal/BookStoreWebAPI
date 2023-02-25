@@ -5,9 +5,11 @@ using Newtonsoft.Json;
 public class CustomExceptionMiddleware
 {
 	private readonly RequestDelegate _next;
-	public CustomExceptionMiddleware(RequestDelegate next)
+	private readonly ILoggerService _loggerService;
+	public CustomExceptionMiddleware(RequestDelegate next, ILoggerService loggerService)
 	{
 		_next = next;
+		_loggerService = loggerService;
 	}
 	public async Task Invoke(HttpContext httpContext)
 	{
@@ -16,10 +18,11 @@ public class CustomExceptionMiddleware
 		try
 		{
 			string message = "[Request] HTTP " + httpContext.Request.Method + " - " + httpContext.Request.Path;
-			Console.WriteLine(message);
+			_loggerService.Write(message);
 			await _next(httpContext);
 			watch.Stop();
 			message = "[Response] HTTP " + httpContext.Request.Method + " - " + httpContext.Request.Path + " responded " + httpContext.Response.StatusCode + " in " + watch.Elapsed.TotalMilliseconds + "ms.";
+			_loggerService.Write(message);
 		}
 		catch (Exception ex)
 		{
@@ -35,6 +38,7 @@ public class CustomExceptionMiddleware
 		httpContext.Response.StatusCode = (int)HttpStatusCode.InternalServerError;
 
 		string message = "[ERROR] HTTP " + httpContext.Request.Method + " - " + httpContext.Response.StatusCode + " ERROR MESSAGE: " + ex.Message + " in " + watch.Elapsed.TotalMilliseconds + "ms.";
+		_loggerService.Write(message);
 		
 		var result = JsonConvert.SerializeObject(new { error = ex.Message }, Formatting.None);
 		

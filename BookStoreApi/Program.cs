@@ -17,7 +17,7 @@ internal class Program
 		// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 		builder.Services.AddEndpointsApiExplorer();
 		builder.Services.AddSwaggerGen();
-		
+		builder.Services.AddSingleton<ILoggerService, DbLogger>();
 
 		var app = builder.Build();
 		
@@ -33,8 +33,6 @@ internal class Program
 			app.UseSwaggerUI();
 		}
 
-		
-		
 		app.UseHttpsRedirection();
 
 		app.UseAuthorization();

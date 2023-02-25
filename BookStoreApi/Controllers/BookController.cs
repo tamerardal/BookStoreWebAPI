@@ -1,14 +1,15 @@
 using AutoMapper;
-using BookStoreApi.BookOperations.CreateBook;
-using BookStoreApi.BookOperations.DeleteBook;
-using BookStoreApi.BookOperations.GetBookDetail;
-using BookStoreApi.BookOperations.GetBooks;
-using BookStoreApi.BookOperations.UpdateBook;
+using BookStoreApi.Applications.BookOperations.CreateBook;
+using BookStoreApi.Applications.BookOperations.DeleteBook;
+using BookStoreApi.Applications.BookOperations.GetBookDetail;
+using BookStoreApi.Applications.BookOperations.GetBooks;
+using BookStoreApi.Applications.BookOperations.UpdateBook;
+
 using FluentValidation;
 using FluentValidation.Results;
 using Microsoft.AspNetCore.Mvc;
-using static BookStoreApi.BookOperations.CreateBook.CreateBookCommand;
 
+using static BookStoreApi.Applications.BookOperations.CreateBook.CreateBookCommand;
 
 [ApiController]
 [Route("[controller]s")]
