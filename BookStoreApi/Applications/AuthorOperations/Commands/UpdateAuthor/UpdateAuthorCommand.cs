@@ -16,7 +16,7 @@ public class UpdateAuthorCommand
 	
 	public void Handle()
 	{
-		var author = _dbContext.Authors.SingleOrDefault(a => a.Id == Model.Id);
+		var author = _dbContext.Authors.SingleOrDefault(a => a.Id == AuthorId);
 		
 		if (author is null)
 			throw new InvalidOperationException("ID is not correct.");
@@ -28,7 +28,6 @@ public class UpdateAuthorCommand
 
 	public class UpdateAuthorViewModel
 	{
-		public int Id { get; set; }
 		public string Name { get; set; }
 		public string Surname { get; set; }
 		public DateTime Birthday { get; set; }

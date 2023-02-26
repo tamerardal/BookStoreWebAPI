@@ -1,7 +1,9 @@
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
+using FluentValidation;
 using static CreateAuthorCommand;
 using static UpdateAuthorCommand;
+
 
 [ApiController]
 [Route("[controller]s")]
@@ -27,6 +29,9 @@ public class AuthorController : ControllerBase
 	{
 		GetAuthorDetailQuery query = new GetAuthorDetailQuery(_context, _mapper);
 		
+		GetAuthorDetailQueryValidator validator = new GetAuthorDetailQueryValidator();
+		validator.ValidateAndThrow(query);
+
 		query.AuthorId = id;
 		
 		return Ok(query.Handle());
@@ -39,7 +44,8 @@ public class AuthorController : ControllerBase
 
 		command.Model = newAuthor;
 		
-		//VALIDATIONS
+		CreateAuthorCommandValidator validator = new CreateAuthorCommandValidator();
+		validator.ValidateAndThrow(command);
 		
 		command.Handle();
 		
@@ -53,6 +59,9 @@ public class AuthorController : ControllerBase
 		
 		command.AuthorId = id;
 		command.Model = updatedAuthor;
+		
+		UpdateAuthorCommandValidator validator = new UpdateAuthorCommandValidator();
+		validator.ValidateAndThrow(command);
 		
 		command.Handle();
 		
