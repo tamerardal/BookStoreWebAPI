@@ -58,6 +58,7 @@ public class DataGenerator
 				{
 					//Id = 1,
 					Title = "Book of 5 Rings",
+					AuthorId = 1,
 					GenreId = 3, //	Philosophy
 					PageCount = 128,
 					PublishDate = new DateTime(1645, 1, 1),
@@ -66,6 +67,7 @@ public class DataGenerator
 				{
 					//Id = 2,
 					Title = "Meditations",
+					AuthorId = 2,
 					GenreId = 3, //	Philosophy
 					PageCount = 112,
 					PublishDate = new DateTime(54, 1, 1),
@@ -74,6 +76,7 @@ public class DataGenerator
 				{
 					//Id = 3,
 					Title = "Dune",
+					AuthorId = 3,
 					GenreId = 2, //	Science-Fiction
 					PageCount = 879,
 					PublishDate = new DateTime(2001, 1, 1),

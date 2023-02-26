@@ -17,7 +17,7 @@ namespace BookStoreApi.Applications.BookOperations.Commands.GetBookDetail
 		}
 		public BookDetailViewModel Handle()
 		{
-			var book = _dbContext.Books.Include(g => g.Genre).Where(book => book.Id == BookId).SingleOrDefault();
+			var book = _dbContext.Books.Include(g => g.Genre).Include(a => a.Author).Where(book => book.Id == BookId).SingleOrDefault();
 			if (book is null)
 			{
 				throw new InvalidOperationException("ID's not correct!");
@@ -33,7 +33,8 @@ namespace BookStoreApi.Applications.BookOperations.Commands.GetBookDetail
 	{
 		public string Title { get; set; }
 		public string Genre { get; set; }
-		public string Author { get; set; }
+		public string AuthorName { get; set; }
+		public string AuthorSurname { get; set; }
 		public int PageCount { get; set; }
 		public string PublishDate { get; set; }
 	}
