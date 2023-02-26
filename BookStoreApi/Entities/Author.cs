@@ -1,9 +1,10 @@
 using System.ComponentModel.DataAnnotations.Schema;
 
-public class Genre
+public class Author
 {
 	[DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-	public int Id{ get; set; }
+	public int Id { get; set; }
 	public string Name { get; set; }
-	public bool IsActive { get; set; } = true;
+	public string Surname { get; set; }
+	public DateTime Birthday { get; set; }
 }

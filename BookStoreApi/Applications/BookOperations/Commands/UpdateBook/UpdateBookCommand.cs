@@ -29,9 +29,9 @@ namespace BookStoreApi.Applications.BookOperations.Commands.UpdateBook
 
     public class UpdateBookViewModel
     {
-        public string? Title { get; set; }
+        public string Title { get; set; }
         public int GenreId { get; set; }
-        public string? Author { get; set; }
+        public string Author { get; set; }
         public int PageCount { get; set; }
         public DateTime PublishDate { get; set; }
     }

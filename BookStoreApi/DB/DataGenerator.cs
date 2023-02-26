@@ -11,6 +11,30 @@ public class DataGenerator
 				return ;
 			}
 			
+			context.Authors.AddRange(
+				new Author
+				{
+					//Id = 1,
+					Name = "Miyamoto",
+					Surname = "Musashi",
+					Birthday = new DateTime(1600, 1, 1)
+				},
+				new Author
+				{
+					//Id = 1,
+					Name = "Marcus",
+					Surname = "Aurelius",
+					Birthday = new DateTime(45, 1, 1)
+				},
+				new Author
+				{
+					//Id = 1,
+					Name = "Frank",
+					Surname = "Herbert",
+					Birthday = new DateTime(1939, 1, 1)
+				}
+			);
+			
 			context.Genres.AddRange(
 				new Genre
 				{
@@ -34,7 +58,6 @@ public class DataGenerator
 				{
 					//Id = 1,
 					Title = "Book of 5 Rings",
-					Author = "Miyamoto Musashi",
 					GenreId = 3, //	Philosophy
 					PageCount = 128,
 					PublishDate = new DateTime(1645, 1, 1),
@@ -43,7 +66,6 @@ public class DataGenerator
 				{
 					//Id = 2,
 					Title = "Meditations",
-					Author = "Marcus Aurelius",
 					GenreId = 3, //	Philosophy
 					PageCount = 112,
 					PublishDate = new DateTime(54, 1, 1),
@@ -52,7 +74,6 @@ public class DataGenerator
 				{
 					//Id = 3,
 					Title = "Dune",
-					Author = "Frank Herbert",
 					GenreId = 2, //	Science-Fiction
 					PageCount = 879,
 					PublishDate = new DateTime(2001, 1, 1),

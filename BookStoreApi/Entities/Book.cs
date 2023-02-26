@@ -2,11 +2,11 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 public class Book
 {
-	public string? Title { get; set; }
+	public string Title { get; set; }
 
 	[DatabaseGenerated(databaseGeneratedOption: DatabaseGeneratedOption.Identity)]
 	public int Id { get; set; }
-	public string? Author { get; set; }
+	public Author Author { get; set; }
 	public int GenreId { get; set; }
 	public Genre Genre { get; set; }
 	public int PageCount { get; set; }

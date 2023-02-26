@@ -2,7 +2,7 @@ using AutoMapper;
 
 public class CreateGenreCommand
 {
-	public CreateGenreViewModel? Model { get; set; }
+	public CreateGenreViewModel Model { get; set; }
 	private readonly BookStoreDbContext _dbContext;
 	private readonly IMapper _mapper;
 	public CreateGenreCommand(BookStoreDbContext dbContext, IMapper mapper)
@@ -24,7 +24,7 @@ public class CreateGenreCommand
 	}
 	public class CreateGenreViewModel
 	{
-		public string? Name { get; set; }
+		public string Name { get; set; }
 		public bool IsActive { get; set; }
 	}
 }
