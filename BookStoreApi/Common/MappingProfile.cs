@@ -7,6 +7,10 @@ using static CreateGenreCommand;
 using static GetGenreDetailQuery;
 using static GetGenresQuery;
 using static UpdateGenreCommand;
+using static GetAuthorsQuery;
+using static GetAuthorDetailQuery;
+using static CreateAuthorCommand;
+using static UpdateAuthorCommand;
 
 namespace BookStoreApi.Common
 {
@@ -23,6 +27,11 @@ namespace BookStoreApi.Common
 			CreateMap<Genre, GenreDetailViewModel>();
 			CreateMap<CreateGenreViewModel, Genre>();
 			CreateMap<UpdateGenreViewModel, Genre>();
+			
+			CreateMap<Author, AuthorsViewModel>();
+			CreateMap<Author, AuthorDetailViewModel>();
+			CreateMap<CreateAuthorViewModel, Author>();
+			CreateMap<UpdateAuthorViewModel, Author>();
 		}
 	}
 }
