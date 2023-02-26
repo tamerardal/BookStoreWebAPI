@@ -66,7 +66,7 @@ public class GenreController : ControllerBase
 	}
 	
 	[HttpDelete("{id}")]
-	public IActionResult Remove(int id)
+	public IActionResult RemoveGenre(int id)
 	{
 		DeleteGenreCommand command = new DeleteGenreCommand(_dbContext);
 		

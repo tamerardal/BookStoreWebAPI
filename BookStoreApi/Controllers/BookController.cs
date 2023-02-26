@@ -29,7 +29,7 @@ public class BookController : ControllerBase
 	}
 	
 	[HttpGet("{id}")]
-	public IActionResult GetById(int id)
+	public IActionResult GetBookById(int id)
 	{
 		GetBookDetailQuery query = new GetBookDetailQuery(_context, _mapper);
 		
@@ -55,7 +55,7 @@ public class BookController : ControllerBase
 	}
 	
 	[HttpPut("{id}")]
-	public IActionResult UpdateResult(int id, [FromBody] UpdateBookViewModel updatedBook)
+	public IActionResult UpdateBook(int id, [FromBody] UpdateBookViewModel updatedBook)
 	{	
 		UpdateBookCommand command = new UpdateBookCommand(_context, _mapper);
 		command.Model = updatedBook;
@@ -70,7 +70,7 @@ public class BookController : ControllerBase
 	}
 	
 	[HttpDelete("{id}")]
-	public IActionResult DeleteResult(int id)
+	public IActionResult DeleteBook(int id)
 	{		
 		DeleteBookCommand command = new DeleteBookCommand(_context);
 		command.BookId = id;
