@@ -11,16 +11,16 @@ public class GetAuthorsQuery
 		_mapper = mapper;
 	}
 	
-	public List<GetAuthorsViewModel> Handle()
+	public List<AuthorsViewModel> Handle()
 	{
 		var authorList = _dbContext.Authors.OrderBy(a => a.Id).ToList();
 		
-		List<GetAuthorsViewModel> viewModel = _mapper.Map<List<GetAuthorsViewModel>>(authorList);
+		List<AuthorsViewModel> viewModel = _mapper.Map<List<AuthorsViewModel>>(authorList);
 		
 		return viewModel;
 	}
 	
-	public class GetAuthorsViewModel
+	public class AuthorsViewModel
 	{
 		public string Name { get; set; }
 		public string Surname { get; set; }

@@ -12,20 +12,20 @@ public class GetAuthorDetailQuery
 		_mapper = mapper;
 	}
 	
-	public GetAuthorDetailViewModel Handle()
+	public AuthorDetailViewModel Handle()
 	{
 		var author = _dbContext.Authors.SingleOrDefault(a => a.Id == AuthorId);
 		
 		if (author is null)
 			throw new InvalidOperationException("ID is not correct!");
 		
-		GetAuthorDetailViewModel vm = _mapper.Map<GetAuthorDetailViewModel>(author);
+		AuthorDetailViewModel vm = _mapper.Map<AuthorDetailViewModel>(author);
 		
 		
 		return vm;
 	}
 	
-	public class GetAuthorDetailViewModel
+	public class AuthorDetailViewModel
 	{
 		public string Name { get; set; }
 		public string Surname { get; set; }
