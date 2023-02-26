@@ -19,4 +19,14 @@ public class AuthorController : ControllerBase
 		GetAuthorsQuery query = new GetAuthorsQuery(_context, _mapper);
 		return Ok(query.Handle());
 	}
+	
+	[HttpGet("{id}")]
+	public IActionResult GetAuthorById(int id)
+	{
+		GetAuthorDetailQuery query = new GetAuthorDetailQuery(_context, _mapper);
+		
+		query.AuthorId = id;
+		
+		return Ok(query.Handle());
+	}
 }
