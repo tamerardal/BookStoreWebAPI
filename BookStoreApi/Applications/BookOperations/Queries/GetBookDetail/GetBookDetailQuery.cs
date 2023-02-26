@@ -1,4 +1,5 @@
 using AutoMapper;
+using Microsoft.EntityFrameworkCore;
 
 namespace BookStoreApi.Applications.BookOperations.Commands.GetBookDetail
 {
@@ -16,7 +17,7 @@ namespace BookStoreApi.Applications.BookOperations.Commands.GetBookDetail
 		}
 		public BookDetailViewModel Handle()
 		{
-			var book = _dbContext.Books.SingleOrDefault(book => book.Id == BookId);
+			var book = _dbContext.Books.Include(g => g.Genre).Where(book => book.Id == BookId).SingleOrDefault();
 			if (book is null)
 			{
 				throw new InvalidOperationException("ID's not correct!");

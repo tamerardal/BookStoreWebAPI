@@ -18,7 +18,9 @@ public class UpdateGenreCommand
 		
 		if (genre is null)
 			throw new InvalidOperationException("ID could not found!");
-		
+		if (_dbContext.Genres.Any(g => genre.Name.ToLower() == Model.Name.ToLower() && g.Id == GenreId))
+			throw new InvalidOperationException("Genre name or ID is already existing.");
+
 		_mapper.Map(Model, genre);
 		
 		_dbContext.SaveChanges();

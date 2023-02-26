@@ -35,7 +35,7 @@ public class DataGenerator
 					//Id = 1,
 					Title = "Book of 5 Rings",
 					Author = "Miyamoto Musashi",
-					GenreId = 5, //	Philosophy
+					GenreId = 3, //	Philosophy
 					PageCount = 128,
 					PublishDate = new DateTime(1645, 1, 1),
 				},
@@ -44,7 +44,7 @@ public class DataGenerator
 					//Id = 2,
 					Title = "Meditations",
 					Author = "Marcus Aurelius",
-					GenreId = 5, //	Philosophy
+					GenreId = 3, //	Philosophy
 					PageCount = 112,
 					PublishDate = new DateTime(54, 1, 1),
 				},

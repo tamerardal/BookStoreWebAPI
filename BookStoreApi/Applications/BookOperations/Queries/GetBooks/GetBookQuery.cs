@@ -1,4 +1,5 @@
 using AutoMapper;
+using Microsoft.EntityFrameworkCore;
 
 namespace BookStoreApi.Applications.BookOperations.Commands.GetBooks
 {
@@ -14,7 +15,7 @@ namespace BookStoreApi.Applications.BookOperations.Commands.GetBooks
 
 		public List<BooksViewModel> Handle()
 		{
-			var bookList = _dbContext.Books.OrderBy(x => x.Id).ToList();
+			var bookList = _dbContext.Books.Include(g => g.Genre).OrderBy(x => x.Id).ToList();
 			List<BooksViewModel> vm = _mapper.Map<List<BooksViewModel>>(bookList);
 			
 			return vm;
