@@ -16,7 +16,7 @@ public class DeleteAuthorCommand
 			throw new InvalidOperationException("ID isn't found.");
 			
 		if (authorBooks is not null)
-			throw new InvalidOperationException(author.Name + " " +  author.Surname + " has published book. Please delete book first.");
+			throw new InvalidOperationException(author.Name + " " +  author.Surname + " has a published book. Please delete book first.");
 			
 		_dbContext.Authors.Remove(author);
 		_dbContext.SaveChanges();
