@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "rODGz6YNQQrmPc9/xDa1JlSbZ1WJLlM6RMH0qHeAYrXIHlHa9VoHR6pOJrrd9BCwojt9WJiSfhwf7HcOBwBWTw==",
+  "dgSpecHash": "AzkVnPFE3CgPN0PSxEyoESVA6wsU3wgioF1KnhmK9JQuYmVcGWxDjPpEQa/QKeUqcXykm8+DirTBcWTQqRgr8g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\tamer\\Desktop\\webapipractices\\book_store_api\\bookstoreapi\\BookStoreApi.csproj",
+  "projectFilePath": "C:\\Users\\tamer\\Desktop\\webapipractices\\book_store_api\\BookStoreApi\\BookStoreApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\tamer\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\tamer\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.0\\automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",
