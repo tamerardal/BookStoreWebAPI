@@ -7104,11 +7104,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\tamer\\Desktop\\webapipractices\\book_store_api\\Tests\\WebApi.UnitTests\\WebApi.UnitTests.csproj",
+      "projectUniqueName": "C:\\Users\\tamer\\Desktop\\webapipractices\\book_store_api\\Tests\\WebApi.UnitTests\\WebApi.UnitTests.csproj",
       "projectName": "WebApi.UnitTests",
-      "projectPath": "c:\\Users\\tamer\\Desktop\\webapipractices\\book_store_api\\Tests\\WebApi.UnitTests\\WebApi.UnitTests.csproj",
+      "projectPath": "C:\\Users\\tamer\\Desktop\\webapipractices\\book_store_api\\Tests\\WebApi.UnitTests\\WebApi.UnitTests.csproj",
       "packagesPath": "C:\\Users\\tamer\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\tamer\\Desktop\\webapipractices\\book_store_api\\Tests\\WebApi.UnitTests\\obj\\",
+      "outputPath": "C:\\Users\\tamer\\Desktop\\webapipractices\\book_store_api\\Tests\\WebApi.UnitTests\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -7129,8 +7129,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "c:\\Users\\tamer\\Desktop\\webapipractices\\book_store_api\\BookStoreApi\\BookStoreApi.csproj": {
-              "projectPath": "c:\\Users\\tamer\\Desktop\\webapipractices\\book_store_api\\BookStoreApi\\BookStoreApi.csproj"
+            "C:\\Users\\tamer\\Desktop\\webapipractices\\book_store_api\\BookStoreApi\\BookStoreApi.csproj": {
+              "projectPath": "C:\\Users\\tamer\\Desktop\\webapipractices\\book_store_api\\BookStoreApi\\BookStoreApi.csproj"
             }
           }
         }
