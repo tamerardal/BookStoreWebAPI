@@ -7,3 +7,14 @@ BookStoreApi/obj/project.nuget.cache
 BookStoreApi/obj/Debug/net6.0/BookStoreApi.assets.cache
 BookStoreApi/obj/Debug/net6.0/BookStoreApi.GeneratedMSBuildEditorConfig.editorconfig
 .gitignore
+Tests/WebApi.UnitTests/bin/Debug/net6.0/WebApi.UnitTests.dll
+Tests/WebApi.UnitTests/bin/Debug/net6.0/WebApi.UnitTests.pdb
+Tests/WebApi.UnitTests/obj/project.nuget.cache
+Tests/WebApi.UnitTests/obj/WebApi.UnitTests.csproj.nuget.dgspec.json
+Tests/WebApi.UnitTests/obj/Debug/net6.0/WebApi.UnitTests.assets.cache
+Tests/WebApi.UnitTests/obj/Debug/net6.0/WebApi.UnitTests.dll
+.gitignore
+Tests/WebApi.UnitTests/obj/Debug/net6.0/WebApi.UnitTests.genruntimeconfig.cache
+.gitignore
+Tests/WebApi.UnitTests/obj/Debug/net6.0/ref/WebApi.UnitTests.dll
+Tests/WebApi.UnitTests/obj/Debug/net6.0/refint/WebApi.UnitTests.dll
