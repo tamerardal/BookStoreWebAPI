@@ -5,10 +5,5 @@ BookStoreApi/bin/Debug/net6.0/BookStoreApi.pdb
 BookStoreApi/obj/BookStoreApi.csproj.nuget.dgspec.json
 BookStoreApi/obj/project.nuget.cache
 BookStoreApi/obj/Debug/net6.0/BookStoreApi.assets.cache
-BookStoreApi/obj/Debug/net6.0/BookStoreApi.dll
 BookStoreApi/obj/Debug/net6.0/BookStoreApi.GeneratedMSBuildEditorConfig.editorconfig
-BookStoreApi/obj/Debug/net6.0/BookStoreApi.pdb
-BookStoreApi/bin/Debug/net6.0/BookStoreApi.dll
 .gitignore
-BookStoreApi/obj/Debug/net6.0/BookStoreApi.dll
-BookStoreApi/obj/Debug/net6.0/BookStoreApi.pdb
