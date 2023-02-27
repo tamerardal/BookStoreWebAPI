@@ -18,3 +18,8 @@ Tests/WebApi.UnitTests/obj/Debug/net6.0/WebApi.UnitTests.genruntimeconfig.cache
 .gitignore
 Tests/WebApi.UnitTests/obj/Debug/net6.0/ref/WebApi.UnitTests.dll
 Tests/WebApi.UnitTests/obj/Debug/net6.0/refint/WebApi.UnitTests.dll
+Tests/WebApi.UnitTests/WebApi.UnitTests.csproj
+Tests/WebApi.UnitTests/bin/Debug/net6.0/CoverletSourceRootsMapping
+Tests/WebApi.UnitTests/obj/Debug/net6.0/WebApi.UnitTests.assets.cache
+Tests/WebApi.UnitTests/obj/Debug/net6.0/WebApi.UnitTests.csproj.AssemblyReference.cache
+Tests/WebApi.UnitTests/obj/Debug/net6.0/WebApi.UnitTests.GeneratedMSBuildEditorConfig.editorconfig
