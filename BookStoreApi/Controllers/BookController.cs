@@ -13,9 +13,9 @@ using static BookStoreApi.Applications.BookOperations.Commands.CreateBook.Create
 [Route("[controller]s")]
 public class BookController : ControllerBase 
 {
-	private readonly BookStoreDbContext _context; // readonly uygulama içerisinden değiştirilemez. Sadece constructor üzerinden değiştirilebilir.
+	private readonly IBookStoreDbContext _context; // readonly uygulama içerisinden değiştirilemez. Sadece constructor üzerinden değiştirilebilir.
 	private readonly IMapper _mapper;
-	public BookController(BookStoreDbContext context, IMapper mapper)
+	public BookController(IBookStoreDbContext context, IMapper mapper)
 	{
 		_context = context;
 		_mapper = mapper;

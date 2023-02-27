@@ -5,10 +5,10 @@ public class UpdateAuthorCommand
 	public int AuthorId { get; set; }
 	public UpdateAuthorViewModel Model { get; set; }
 	
-	private readonly BookStoreDbContext _dbContext;
+	private readonly IBookStoreDbContext _dbContext;
 	private readonly IMapper _mapper;
 
-	public UpdateAuthorCommand(BookStoreDbContext dbContext, IMapper mapper)
+	public UpdateAuthorCommand(IBookStoreDbContext dbContext, IMapper mapper)
 	{
 		_dbContext = dbContext;
 		_mapper = mapper;

@@ -3,10 +3,10 @@ using AutoMapper;
 public class CreateAuthorCommand
 {
 	public CreateAuthorViewModel Model { get; set; }
-	private readonly BookStoreDbContext _dbContext;
+	private readonly IBookStoreDbContext _dbContext;
 	private readonly IMapper _mapper;
 
-	public CreateAuthorCommand(BookStoreDbContext dbContext, IMapper mapper)
+	public CreateAuthorCommand(IBookStoreDbContext dbContext, IMapper mapper)
 	{
 		_dbContext = dbContext;
 		_mapper = mapper;
@@ -21,7 +21,7 @@ public class CreateAuthorCommand
 		
 		author = _mapper.Map<Author>(Model);
 		
-		_dbContext.Add(author);
+		_dbContext.Authors.Add(author);
 		_dbContext.SaveChanges();
 		
 	}

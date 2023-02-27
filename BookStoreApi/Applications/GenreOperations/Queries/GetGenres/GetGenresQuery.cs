@@ -2,10 +2,10 @@ using AutoMapper;
 
 public class GetGenresQuery
 {
-	private readonly BookStoreDbContext _dbContext;
+	private readonly IBookStoreDbContext _dbContext;
 	private readonly IMapper _mapper;
 
-	public GetGenresQuery(BookStoreDbContext dbContext, IMapper mapper)
+	public GetGenresQuery(IBookStoreDbContext dbContext, IMapper mapper)
 	{
 		_dbContext = dbContext;
 		_mapper = mapper;
