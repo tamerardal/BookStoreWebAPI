@@ -1047,11 +1047,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\tamer\\Desktop\\webapipractices\\book_store_api\\bookstoreapi\\BookStoreApi.csproj",
+      "projectUniqueName": "c:\\Users\\tamer\\Desktop\\webapipractices\\WebApi\\BookStoreApi\\BookStoreApi.csproj",
       "projectName": "BookStoreApi",
-      "projectPath": "C:\\Users\\tamer\\Desktop\\webapipractices\\book_store_api\\bookstoreapi\\BookStoreApi.csproj",
+      "projectPath": "c:\\Users\\tamer\\Desktop\\webapipractices\\WebApi\\BookStoreApi\\BookStoreApi.csproj",
       "packagesPath": "C:\\Users\\tamer\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\tamer\\Desktop\\webapipractices\\book_store_api\\bookstoreapi\\obj\\",
+      "outputPath": "c:\\Users\\tamer\\Desktop\\webapipractices\\WebApi\\BookStoreApi\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
