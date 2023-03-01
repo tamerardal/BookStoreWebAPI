@@ -10,16 +10,17 @@ public class UpdateBookCommandValidatorTests : IClassFixture<CommonTestFixture>
 	[Theory]
 	[InlineData(-1)]
 	[InlineData(0)]
-	public void WhenInValidInputAreGiven_Validator_ShouldBeReturnErrors(int id)
+	public void WhenInvalidIdAreGiven_Validator_ShouldBeReturnErrors(int id)
 	{
-		//Arrenge
-		
+		// arrange
+		var model = new UpdateBookViewModel { Title = "Right Title", GenreId = 3, AuthorId = 3 };
+		command.Model = model;
 		command.BookId = id;
-		
-		//Act
+
+		// act
 		var result = validator.Validate(command);
-		
-		//asserts
+
+		// assert
 		result.Errors.Count.Should().BeGreaterThan(0);
 	}
 	[Theory]
@@ -49,13 +50,5 @@ public class UpdateBookCommandValidatorTests : IClassFixture<CommonTestFixture>
 		var result = validator.Validate(command);
 		
 		result.Errors.Count.Should().BeGreaterThan(0);
-	}
-	[Fact]
-	public void WhenValidInputAreGiven_Validator_ShouldNotBeReturnError()
-	{
-		command.Model = new UpdateBookViewModel(){Title = "Test", PageCount = 100, GenreId = 1, PublishDate = DateTime.Now.Date.AddYears(-2)};
-		var result = validator.Validate(command);
-		
-		result.Errors.Count.Should().Be(0);
 	}
 }

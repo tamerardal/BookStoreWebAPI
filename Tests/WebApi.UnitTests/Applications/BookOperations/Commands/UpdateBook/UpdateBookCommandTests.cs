@@ -18,7 +18,7 @@ public class UpdateBookCommandTests : IClassFixture<CommonTestFixture>
 	public void WhenNonValidIdIsGiven_Book_ShoulBeReturn()
 	{
 		UpdateBookCommand command = new UpdateBookCommand(_context, _mapper);
-		command.BookId = 5;
+		
 		
 		FluentActions.Invoking(() => command.Handle()).Should().Throw<InvalidOperationException>().And.Message.Should().Be("Book doesn't exist!");
 	}
@@ -27,8 +27,9 @@ public class UpdateBookCommandTests : IClassFixture<CommonTestFixture>
 	public void WhenValidInputsAreGiven_Book_ShouldBeUpdated()
 	{
 		UpdateBookCommand command = new UpdateBookCommand(_context, _mapper);
-		// UpdateBookViewModel model = new UpdateBookViewModel() { Title = "Hobbits", PageCount = 1000, PublishDate = DateTime.Now.Date.AddYears(-10), GenreId = 1, AuthorId = 2 };
+		UpdateBookViewModel model = new UpdateBookViewModel() { Title = "Hobbits", PageCount = 1000, PublishDate = DateTime.Now.Date.AddYears(-10), GenreId = 1, AuthorId = 2 };
 		command.BookId = 1;
+		command.Model = model;
 		
 		FluentActions.Invoking(() => command.Handle()).Invoke();
 		
