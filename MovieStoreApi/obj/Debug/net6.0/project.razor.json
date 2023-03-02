@@ -1,6 +1,6 @@
 {
-  "SerializedFilePath": "c:\\Users\\tamer\\Desktop\\webapipractices\\WebApi\\BookStoreApi\\obj\\Debug\\net6.0\\project.razor.json",
-  "FilePath": "c:\\Users\\tamer\\Desktop\\webapipractices\\WebApi\\BookStoreApi\\BookStoreApi.csproj",
+  "SerializedFilePath": "c:\\Users\\tamer\\Desktop\\webapipractices\\WebApi\\MovieStoreApi\\obj\\Debug\\net6.0\\project.razor.json",
+  "FilePath": "c:\\Users\\tamer\\Desktop\\webapipractices\\WebApi\\MovieStoreApi\\MovieStoreApi.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-3.0",
     "LanguageVersion": "6.0",
@@ -18371,7 +18371,7 @@
     ],
     "CSharpLanguageVersion": 1000
   },
-  "RootNamespace": "BookStoreApi",
+  "RootNamespace": "MovieStoreApi",
   "Documents": [],
   "SerializationFormat": "0.3"
 }

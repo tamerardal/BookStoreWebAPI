@@ -8,8 +8,14 @@ C:\Users\tamer\Desktop\webapipractices\WebApi\MovieStoreApi\bin\Debug\net6.0\Mov
 C:\Users\tamer\Desktop\webapipractices\WebApi\MovieStoreApi\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
 C:\Users\tamer\Desktop\webapipractices\WebApi\MovieStoreApi\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
 C:\Users\tamer\Desktop\webapipractices\WebApi\MovieStoreApi\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.InMemory.dll
+C:\Users\tamer\Desktop\webapipractices\WebApi\MovieStoreApi\bin\Debug\net6.0\Microsoft.Extensions.Caching.Abstractions.dll
 C:\Users\tamer\Desktop\webapipractices\WebApi\MovieStoreApi\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
 C:\Users\tamer\Desktop\webapipractices\WebApi\MovieStoreApi\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\tamer\Desktop\webapipractices\WebApi\MovieStoreApi\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\tamer\Desktop\webapipractices\WebApi\MovieStoreApi\bin\Debug\net6.0\Microsoft.Extensions.Logging.dll
+C:\Users\tamer\Desktop\webapipractices\WebApi\MovieStoreApi\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\tamer\Desktop\webapipractices\WebApi\MovieStoreApi\bin\Debug\net6.0\Microsoft.Extensions.Options.dll
+C:\Users\tamer\Desktop\webapipractices\WebApi\MovieStoreApi\bin\Debug\net6.0\Microsoft.Extensions.Primitives.dll
 C:\Users\tamer\Desktop\webapipractices\WebApi\MovieStoreApi\bin\Debug\net6.0\Microsoft.OpenApi.dll
 C:\Users\tamer\Desktop\webapipractices\WebApi\MovieStoreApi\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\tamer\Desktop\webapipractices\WebApi\MovieStoreApi\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
@@ -35,3 +41,5 @@ C:\Users\tamer\Desktop\webapipractices\WebApi\MovieStoreApi\obj\Debug\net6.0\ref
 C:\Users\tamer\Desktop\webapipractices\WebApi\MovieStoreApi\obj\Debug\net6.0\MovieStoreApi.pdb
 C:\Users\tamer\Desktop\webapipractices\WebApi\MovieStoreApi\obj\Debug\net6.0\MovieStoreApi.genruntimeconfig.cache
 C:\Users\tamer\Desktop\webapipractices\WebApi\MovieStoreApi\obj\Debug\net6.0\ref\MovieStoreApi.dll
+C:\Users\tamer\Desktop\webapipractices\WebApi\MovieStoreApi\bin\Debug\net6.0\AutoMapper.dll
+C:\Users\tamer\Desktop\webapipractices\WebApi\MovieStoreApi\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
