@@ -34,4 +34,12 @@ public class UserController : ControllerBase
 		
 		return command.Handle();
 	}
+	[HttpGet("refreshToken")]
+	public ActionResult<Token> RefreshToken([FromQuery] string token)
+	{
+		RefreshTokenCommand command = new RefreshTokenCommand(_context, _configuration);
+		command.RefreshToken = token;
+		
+		return command.Handle();
+	}
 }
