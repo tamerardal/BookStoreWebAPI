@@ -260,3 +260,10 @@ c:\Users\tamer\Desktop\webapipractices\WebApi\Tests\WebApi.UnitTests\obj\Debug\n
 c:\Users\tamer\Desktop\webapipractices\WebApi\Tests\WebApi.UnitTests\obj\Debug\net6.0\WebApi.UnitTests.pdb
 c:\Users\tamer\Desktop\webapipractices\WebApi\Tests\WebApi.UnitTests\obj\Debug\net6.0\WebApi.UnitTests.genruntimeconfig.cache
 c:\Users\tamer\Desktop\webapipractices\WebApi\Tests\WebApi.UnitTests\obj\Debug\net6.0\ref\WebApi.UnitTests.dll
+c:\Users\tamer\Desktop\webapipractices\WebApi\Tests\WebApi.UnitTests\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+c:\Users\tamer\Desktop\webapipractices\WebApi\Tests\WebApi.UnitTests\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+c:\Users\tamer\Desktop\webapipractices\WebApi\Tests\WebApi.UnitTests\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+c:\Users\tamer\Desktop\webapipractices\WebApi\Tests\WebApi.UnitTests\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+c:\Users\tamer\Desktop\webapipractices\WebApi\Tests\WebApi.UnitTests\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+c:\Users\tamer\Desktop\webapipractices\WebApi\Tests\WebApi.UnitTests\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+c:\Users\tamer\Desktop\webapipractices\WebApi\Tests\WebApi.UnitTests\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
