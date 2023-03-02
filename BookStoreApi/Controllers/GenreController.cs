@@ -1,8 +1,10 @@
 using AutoMapper;
 using FluentValidation;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using static CreateGenreCommand;
 
+[Authorize]
 [ApiController]
 [Route("[controller]s")]
 public class GenreController : ControllerBase

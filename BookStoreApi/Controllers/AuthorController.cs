@@ -3,8 +3,9 @@ using Microsoft.AspNetCore.Mvc;
 using FluentValidation;
 using static CreateAuthorCommand;
 using static UpdateAuthorCommand;
+using Microsoft.AspNetCore.Authorization;
 
-
+[Authorize]
 [ApiController]
 [Route("[controller]s")]
 public class AuthorController : ControllerBase
