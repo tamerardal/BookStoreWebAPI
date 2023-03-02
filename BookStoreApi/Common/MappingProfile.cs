@@ -32,6 +32,8 @@ namespace BookStoreApi.Common
 			CreateMap<Author, AuthorDetailViewModel>();
 			CreateMap<CreateAuthorViewModel, Author>();
 			CreateMap<UpdateAuthorViewModel, Author>();
+			
+			CreateMap<CreateUserViewModel, User>();
 		}
 	}
 }
