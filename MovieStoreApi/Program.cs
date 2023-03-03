@@ -1,31 +1,43 @@
+using System.Reflection;
+using Microsoft.EntityFrameworkCore;
+
 internal class Program
 {
-    private static void Main(string[] args)
-    {
-        var builder = WebApplication.CreateBuilder(args);
+	private static void Main(string[] args)
+	{
+		var builder = WebApplication.CreateBuilder(args);
 
-        // Add services to the container.
+		// Add services to the container.
 
-        builder.Services.AddControllers();
-        // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-        builder.Services.AddEndpointsApiExplorer();
-        builder.Services.AddSwaggerGen();
+		builder.Services.AddControllers();
+		builder.Services.AddDbContext<MovieStoreDbContext>(opt => opt.UseInMemoryDatabase(databaseName: "MovieStoreDB"));
+		builder.Services.AddScoped<IMovieStoreDbContext>(pro => pro.GetService<MovieStoreDbContext>());
+		builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
+		// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+		builder.Services.AddEndpointsApiExplorer();
+		builder.Services.AddSwaggerGen();
 
-        var app = builder.Build();
+		var app = builder.Build();
+		
+		using(var scope = app.Services.CreateScope())
+		{
+			var services = scope.ServiceProvider;
+			DataGenerator.Initialize(services);
+		}
 
-        // Configure the HTTP request pipeline.
-        if (app.Environment.IsDevelopment())
-        {
-            app.UseSwagger();
-            app.UseSwaggerUI();
-        }
+		// Configure the HTTP request pipeline.
+		if (app.Environment.IsDevelopment())
+		{
+			app.UseSwagger();
+			app.UseSwaggerUI();
+		}
 
-        app.UseHttpsRedirection();
+		app.UseHttpsRedirection();
 
-        app.UseAuthorization();
+		app.UseAuthorization();
 
-        app.MapControllers();
+		app.MapControllers();
 
-        app.Run();
-    }
+		app.Run();
+	}
 }
