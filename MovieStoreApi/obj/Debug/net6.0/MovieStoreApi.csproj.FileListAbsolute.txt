@@ -35,3 +35,11 @@ C:\Users\tamer\Desktop\webapipractices\WebApi\MovieStoreApi\obj\Debug\net6.0\ref
 C:\Users\tamer\Desktop\webapipractices\WebApi\MovieStoreApi\obj\Debug\net6.0\MovieStoreApi.pdb
 C:\Users\tamer\Desktop\webapipractices\WebApi\MovieStoreApi\obj\Debug\net6.0\MovieStoreApi.genruntimeconfig.cache
 C:\Users\tamer\Desktop\webapipractices\WebApi\MovieStoreApi\obj\Debug\net6.0\ref\MovieStoreApi.dll
+C:\Users\tamer\Desktop\webapipractices\WebApi\moviestoreapi\bin\Debug\net6.0\AutoMapper.dll
+C:\Users\tamer\Desktop\webapipractices\WebApi\moviestoreapi\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\tamer\Desktop\webapipractices\WebApi\moviestoreapi\bin\Debug\net6.0\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\tamer\Desktop\webapipractices\WebApi\moviestoreapi\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\tamer\Desktop\webapipractices\WebApi\moviestoreapi\bin\Debug\net6.0\Microsoft.Extensions.Logging.dll
+C:\Users\tamer\Desktop\webapipractices\WebApi\moviestoreapi\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\tamer\Desktop\webapipractices\WebApi\moviestoreapi\bin\Debug\net6.0\Microsoft.Extensions.Options.dll
+C:\Users\tamer\Desktop\webapipractices\WebApi\moviestoreapi\bin\Debug\net6.0\Microsoft.Extensions.Primitives.dll
