@@ -21,4 +21,15 @@ public class MovieController : ControllerBase
 		
 		return Ok(query.Handle());
 	}
+	
+	[HttpGet("{id}")]
+	public IActionResult GetMovieDetail(int id)
+	{
+		GetMovieDetailQuery query = new GetMovieDetailQuery(_context, _mapper);
+		
+		query.MovieId = id;
+		var result = query.Handle();
+		
+		return Ok(result);
+	}
 }
