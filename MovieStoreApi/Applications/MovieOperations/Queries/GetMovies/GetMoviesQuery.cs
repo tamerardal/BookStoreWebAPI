@@ -1,6 +1,7 @@
 using AutoMapper;
 using Microsoft.EntityFrameworkCore;
 
+
 public class GetMoviesQuery
 {
 	private readonly IMovieStoreDbContext _context;

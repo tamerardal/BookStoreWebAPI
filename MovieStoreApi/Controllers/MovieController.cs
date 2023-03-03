@@ -21,4 +21,25 @@ public class MovieController : ControllerBase
 		
 		return Ok(query.Handle());
 	}
+	
+	[HttpGet("{id}")]
+	public IActionResult GetMovieDetail(int id)
+	{
+		GetMovieDetailQuery query = new GetMovieDetailQuery(_context, _mapper);
+		
+		query.MovieId = id;
+		
+		return Ok(query.Handle());
+	}
+	
+	[HttpPost]
+	public IActionResult CreateMovie([FromBody] CreateMovieViewModel newMovie)
+	{
+		CreateMovieCommand command = new CreateMovieCommand(_context, _mapper);
+		
+		command.Model = newMovie;
+		command.Handle();
+		
+		return Ok();
+	}
 }
