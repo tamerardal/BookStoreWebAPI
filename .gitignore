@@ -23,3 +23,14 @@ Tests/WebApi.UnitTests/bin/Debug/net6.0/CoverletSourceRootsMapping
 Tests/WebApi.UnitTests/obj/Debug/net6.0/WebApi.UnitTests.assets.cache
 Tests/WebApi.UnitTests/obj/Debug/net6.0/WebApi.UnitTests.csproj.AssemblyReference.cache
 Tests/WebApi.UnitTests/obj/Debug/net6.0/WebApi.UnitTests.GeneratedMSBuildEditorConfig.editorconfig
+MovieStoreApi/bin/Debug/net6.0/MovieStoreApi.dll
+MovieStoreApi/bin/Debug/net6.0/MovieStoreApi.pdb
+MovieStoreApi/obj/Debug/net6.0/MovieStoreApi.csproj.AssemblyReference.cache
+MovieStoreApi/obj/Debug/net6.0/MovieStoreApi.csproj.CoreCompileInputs.cache
+MovieStoreApi/obj/Debug/net6.0/MovieStoreApi.csproj.FileListAbsolute.txt
+MovieStoreApi/obj/Debug/net6.0/MovieStoreApi.dll
+MovieStoreApi/obj/Debug/net6.0/MovieStoreApi.pdb
+MovieStoreApi/obj/Debug/net6.0/project.razor.json
+MovieStoreApi/obj/Debug/net6.0/ref/MovieStoreApi.dll
+MovieStoreApi/obj/Debug/net6.0/refint/MovieStoreApi.dll
+Tests/WebApi.UnitTests/obj/Debug/net6.0/WebApi.UnitTests.csproj.AssemblyReference.cache
