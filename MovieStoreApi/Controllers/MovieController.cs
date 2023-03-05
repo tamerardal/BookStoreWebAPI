@@ -1,5 +1,6 @@
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
+using static CreateMovieCommand;
 
 [ApiController]
 [Route("[controller]s")]
@@ -31,5 +32,35 @@ public class MovieController : ControllerBase
 		var result = query.Handle();
 		
 		return Ok(result);
+	}
+	
+	[HttpPost]
+	public IActionResult AddMovie([FromBody] CreateMovieViewModel newMovie)
+	{
+		CreateMovieCommand command = new CreateMovieCommand(_context, _mapper);
+		command.Model = newMovie;
+		command.Handle();
+		
+		return Ok();
+	}
+	
+	[HttpPut("{id}")]
+	public IActionResult UpdateMovie(int id, [FromBody]UpdateMovieViewModel updatedMovie)
+	{
+		UpdateMovieCommand command = new UpdateMovieCommand(_context, _mapper);
+		command.MovieId = id;
+		command.Model = updatedMovie;
+		command.Handle();
+		
+		return Ok();
+	}
+	
+	[HttpDelete("{id}")]
+	public IActionResult DeleteMovie(int id)
+	{
+		DeleteMovieCommand command = new DeleteMovieCommand(_context);
+		command.MovieId = id;
+		command.Handle();
+		return Ok();
 	}
 }

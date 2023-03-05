@@ -6,22 +6,23 @@ public class MappingProfile : Profile
 {
 	public MappingProfile()
 	{
+		CreateMap<CreateMovieCommand.CreateMovieViewModel, Movie>();
 		CreateMap<Movie, MoviesViewModel>()
 		.ForMember(dest => dest.Genre, opt => opt.MapFrom(src => src.Genre.Name))
 		.ForMember(dest => dest.Director, opt => opt.MapFrom(src => src.Director.Name + " " + src.Director.Surname))
-		.ForMember(dest => dest.Performers, opt => opt.MapFrom(src => returnActors(src.Performers)));
+		.ForMember(dest => dest.Performers, opt => opt.MapFrom(src => returnPerformers(src.Performers)));
 		CreateMap<Movie, MovieDetailViewModel>()
 		.ForMember(dest => dest.Genre, opt => opt.MapFrom(src => src.Genre.Name))
 		.ForMember(dest => dest.Director, opt => opt.MapFrom(src => src.Director.Name + " " + src.Director.Surname))
-		.ForMember(dest => dest.Performers, opt => opt.MapFrom(src => returnActors(src.Performers)));
-		
+		.ForMember(dest => dest.Performers, opt => opt.MapFrom(src => returnPerformers(src.Performers)));
+		CreateMap<UpdateMovieViewModel, Movie>();
 		
 		
 	}
-	public List<string> returnActors(List<Performer> actors)
+	public List<string> returnPerformers(List<Performer> performers)
 	{
 	  List<string> performerNames = new List<string>();
-	  foreach(Performer performer in actors)
+	  foreach(Performer performer in performers)
 	  {
 		performerNames.Add(performer.Name + " " + performer.Surname);
 	  }

@@ -20,7 +20,7 @@ public class DataGenerator
 				new Genre{Name = "Mystery"},
 				new Genre{Name = "Romance"}
 		  	);
-			context.SaveChanges(); 
+ 
 
 			context.Directors.AddRange(
 				new Director{Name = "Alfred", Surname = "Hitchcock"},
@@ -29,7 +29,7 @@ public class DataGenerator
 		  		new Director{Name = "Martin", Surname = "Scorsese"},
 		  		new Director{Name = "Orson", Surname = "Welles"},
 		  		new Director{ Name = "Akira", Surname = "Kurosawa"});
-			context.SaveChanges();
+
 
 			context.Performers.AddRange(
 		  		new Performer{Name = "Robert", Surname = "DeNiro"},
@@ -46,7 +46,6 @@ public class DataGenerator
 		  		new Performer{Name = "Tom", Surname = "Hanks"},
 		  		new Performer{Name = "Elizabeth", Surname = "Taylor"},
 		  		new Performer{ Name = "Bette", Surname = "Davis"});
-			context.SaveChanges();
 
 			context.Movies.AddRange(
 				new Movie{

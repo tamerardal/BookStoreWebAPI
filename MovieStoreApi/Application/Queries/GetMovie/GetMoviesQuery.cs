@@ -13,7 +13,7 @@ public class GetMoviesQuery
 	}
 	public List<MoviesViewModel> Handle()
 	{
-		var movies = _context.Movies.Include(g => g.Genre).Include(d => d.Director).Include(p => p.Performer).OrderBy(m => m.Id).ToList();
+		var movies = _context.Movies.Include(g => g.Genre).Include(d => d.Director).Include(p => p.Performer).OrderBy(m => m.Id).ToList<Movie>();
 		List<MoviesViewModel> viewModels = _mapper.Map<List<MoviesViewModel>>(movies);
 
 		return viewModels;
