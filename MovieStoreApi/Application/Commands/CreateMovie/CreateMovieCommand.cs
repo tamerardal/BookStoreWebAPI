@@ -29,7 +29,7 @@ public class CreateMovieCommand
 		public DateTime ReleaseDate { get; set; }
 		public int GenreId { get; set; }
 		public int DirectorId { get; set; }
-		public List<Performer> Performers { get; set; }
+		public string Performers { get; set; }
 		public double Price { get; set; }
 	}
 }

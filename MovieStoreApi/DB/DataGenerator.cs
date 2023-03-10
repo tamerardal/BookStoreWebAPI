@@ -52,32 +52,32 @@ public class DataGenerator
 					Name = "The Godfater", 
 					GenreId = 6, DirectorId = 1, Price = 30,
 					ReleaseDate = new DateTime(1972), 
-					Performers = new List<Performer>()},
+					Performers = "Marlon Brando"},
 				new Movie{
 					Name = "Citizen Kane", 
 					GenreId = 3, DirectorId = 2, Price = 20,
 					ReleaseDate = new DateTime(1941), 
-					Performers = new List<Performer>()},
+					Performers = "Orson Welles"},
 				new Movie{
 					Name = "La Dolce Vita", 
 					GenreId = 7, DirectorId = 3, Price = 10,
 					ReleaseDate = new DateTime(1960), 
-					Performers = new List<Performer>()},
+					Performers = "Ingrid Bergman"},
 				new Movie{
 					Name = "Seven Samurai", 
 					GenreId = 1, DirectorId = 4, Price = 40,
 					ReleaseDate = new DateTime(1954), 
-					Performers = new List<Performer>()},
+					Performers = "Akira Kurosawa"},
 				new Movie{
 					Name = "There Will Be Blood", 
 					GenreId = 3, DirectorId = 5, Price = 25,
 					ReleaseDate = new DateTime(2007), 
-					Performers = new List<Performer>()},
+					Performers = "Daniel Daylewis"},
 				new Movie{
 					Name = "Singing in the Rain", 
 					GenreId = 5, DirectorId = 6, Price = 15,
 					ReleaseDate = new DateTime(1952), 
-					Performers = new List<Performer>()}
+					Performers = "Ingrid Bergman"}
 			);
 			// context.Customers.AddRange(
 			// 	new Customer

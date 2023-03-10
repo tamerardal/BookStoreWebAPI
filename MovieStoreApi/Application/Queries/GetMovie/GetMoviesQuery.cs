@@ -13,7 +13,7 @@ public class GetMoviesQuery
 	}
 	public List<MoviesViewModel> Handle()
 	{
-		var movies = _context.Movies.Include(g => g.Genre).Include(d => d.Director).Include(p => p.Performer).OrderBy(m => m.Id).ToList<Movie>();
+		var movies = _context.Movies.Include(g => g.Genre).Include(d => d.Director).OrderBy(m => m.Id).ToList<Movie>();
 		List<MoviesViewModel> viewModels = _mapper.Map<List<MoviesViewModel>>(movies);
 
 		return viewModels;
@@ -24,7 +24,7 @@ public class GetMoviesQuery
 		public string ReleaseDate { get; set; }
 		public string Genre { get; set; }
 		public string Director { get; set; }
-		public List<string> Performers { get; set; }
+		public string Performers { get; set; }
 		public double Price { get; set; }
 	}
 }

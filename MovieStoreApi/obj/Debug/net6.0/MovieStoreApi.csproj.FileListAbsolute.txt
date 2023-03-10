@@ -44,3 +44,4 @@ C:\Users\tamer\Desktop\webapipractices\WebApi\MovieStoreApi\obj\Debug\net6.0\ref
 C:\Users\tamer\Desktop\webapipractices\WebApi\MovieStoreApi\obj\Debug\net6.0\MovieStoreApi.pdb
 C:\Users\tamer\Desktop\webapipractices\WebApi\MovieStoreApi\obj\Debug\net6.0\MovieStoreApi.genruntimeconfig.cache
 C:\Users\tamer\Desktop\webapipractices\WebApi\MovieStoreApi\obj\Debug\net6.0\ref\MovieStoreApi.dll
+C:\Users\tamer\Desktop\webapipractices\WebApi\MovieStoreApi\bin\Debug\net6.0\FluentValidation.dll
