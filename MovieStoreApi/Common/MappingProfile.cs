@@ -15,6 +15,8 @@ public class MappingProfile : Profile
 		.ForMember(dest => dest.Director, opt => opt.MapFrom(src => src.Director.Name + " " + src.Director.Surname));
 		CreateMap<UpdateMovieViewModel, Movie>();
 		
+		CreateMap<CreateCustomerCommand.CreateCustomerViewModel, Customer>();
+		
 		
 	}
 	// public List<string> returnPerformers(List<int> performers)

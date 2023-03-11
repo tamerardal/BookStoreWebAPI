@@ -79,12 +79,26 @@ public class DataGenerator
 					ReleaseDate = new DateTime(1952), 
 					Performers = "Ingrid Bergman"}
 			);
-			// context.Customers.AddRange(
-			// 	new Customer
-			// 	{
-					
-			// 	}
-			// );
+			context.Customers.AddRange(
+				new Customer
+				{
+					Name = "Tamer",
+					Surname = "Ardal",
+					Email = "tamerardal@ardal.com",
+					Password = "123456",
+					PurchasesFilmId = 1,
+					FavGenreId = 3,
+				},
+				new Customer
+				{
+					Name = "Ali",
+					Surname = "Veli",
+					Email = "aliveli@ardal.com",
+					Password = "asdfgh",
+					PurchasesFilmId = 5,
+					FavGenreId = 1,
+				}
+			);
 
 				context.SaveChanges();
 		}
