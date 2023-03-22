@@ -21,10 +21,7 @@ public class GetMoviesQuery
 	public class MoviesViewModel
 	{
 		public string Name { get; set; }
-		public string ReleaseDate { get; set; }
 		public string Genre { get; set; }
 		public string Director { get; set; }
-		public string Performers { get; set; }
-		public double Price { get; set; }
 	}
 }

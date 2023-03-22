@@ -16,7 +16,7 @@ public class GetMovieDetailQuery
 	
 	public MovieDetailViewModel Handle()
 	{
-		var movie = _context.Movies.Include(g => g.Genre).Include(d => d.Director).SingleOrDefault(m => m.Id == MovieId);
+		var movie = _context.Movies.Include(g => g.Genre).Include(d => d.Director).Include(p => p.PerformersJoint).ThenInclude(p => p.Performer).SingleOrDefault(m => m.Id == MovieId);
 		
 		if (movie is null)
 			throw new InvalidOperationException("ID's not correct!");
