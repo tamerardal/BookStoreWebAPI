@@ -1,6 +1,11 @@
 using AutoMapper;
+using static CreatePerformerCommand;
+using static GetDirectorDetailQuery;
+using static GetDirectorsQuery;
 using static GetMovieDetailQuery;
 using static GetMoviesQuery;
+using static GetPerformerDetailQuery;
+using static GetPerformersQuery;
 
 public class MappingProfile : Profile
 {
@@ -12,20 +17,19 @@ public class MappingProfile : Profile
 		.ForMember(dest => dest.Director, opt => opt.MapFrom(src => src.Director.Name + " " + src.Director.Surname));
 		CreateMap<Movie, MovieDetailViewModel>()
 		.ForMember(dest => dest.Genre, opt => opt.MapFrom(src => src.Genre.Name))
-		.ForMember(dest => dest.Director, opt => opt.MapFrom(src => src.Director.Name + " " + src.Director.Surname));
+		.ForMember(dest => dest.Director, opt => opt.MapFrom(src => src.Director.Name + " " + src.Director.Surname))
+		.ForMember(dest => dest.Performers, opt => opt.MapFrom(src => src.PerformersJoint.Select(x => x.Performer.Name + " " + x.Performer.Surname)));
 		CreateMap<UpdateMovieViewModel, Movie>();
 		
 		CreateMap<CreateCustomerCommand.CreateCustomerViewModel, Customer>();
 		
+		CreateMap<Director, DirectorsViewModel>();
+		CreateMap<Director, DirectorDetailViewModel>();
+		CreateMap<CreateDirectorCommand.CreateDirectorViewModel, Director>();
 		
+		CreateMap<CreatePerformerViewModel, Performer>();
+		CreateMap<Performer, PerformersViewModel>();
+		CreateMap<Performer, PerformerDetailViewModel>()
+		.ForMember(dest => dest.MoviesPlayed, opt => opt.MapFrom(src => src.PerformersJoints.Select(x => x.Movie.Name)));
 	}
-	// public List<string> returnPerformers(List<int> performers)
-	// {
-	//   List<string> performerNames = new List<string>();
-	//   foreach(int performer in performers)
-	//   {
-	// 	performerNames.Add(performer + " " + performer.Surname);
-	//   }
-	//   return performerNames;
-	// }
 }
