@@ -1,0 +1,17 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\MovieStoreApi",
+    "\\MovieStoreApi\\Application",
+    "\\MovieStoreApi\\Application\\CustomerOperations",
+    "\\MovieStoreApi\\Application\\CustomerOperations\\Commands",
+    "\\MovieStoreApi\\Application\\CustomerOperations\\Commands\\CreateCustomer",
+    "\\MovieStoreApi\\Application\\DirectorOperations",
+    "\\MovieStoreApi\\Application\\DirectorOperations\\Queries",
+    "\\MovieStoreApi\\Application\\DirectorOperations\\Queries\\GetDirector",
+    "\\MovieStoreApi\\Application\\MovieOperations",
+    "\\MovieStoreApi\\Application\\MovieOperations\\Queries"
+  ],
+  "SelectedNode": "\\MovieStoreApi\\Application\\CustomerOperations\\Commands\\CreateCustomer\\CreateCustomerCommand.cs",
+  "PreviewInSolutionExplorer": false
+}
