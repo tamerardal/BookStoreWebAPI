@@ -6,6 +6,6 @@ public class Performer
 	public int Id { get; set; }
 	public string Name { get; set; }
 	public string Surname { get; set; }
-	public string FilmsActing { get; set; }
+	public virtual ICollection<PerformersJoint> PerformersJoints { get; set; }
 	public bool IsActive { get; set; }
 }

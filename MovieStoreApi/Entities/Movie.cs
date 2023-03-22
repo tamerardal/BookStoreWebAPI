@@ -10,6 +10,6 @@ public class Movie
 	public Genre Genre { get; set; }
 	public int DirectorId { get; set; }
 	public Director Director { get; set; }
-	public string Performers { get; set; }
 	public double Price { get; set; }
+	public virtual ICollection<PerformersJoint> PerformersJoint { get; set; }
 }
