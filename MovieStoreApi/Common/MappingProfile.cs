@@ -6,6 +6,7 @@ using static GetMovieDetailQuery;
 using static GetMoviesQuery;
 using static GetPerformerDetailQuery;
 using static GetPerformersQuery;
+using static UpdatePerformerCommand;
 
 public class MappingProfile : Profile
 {
@@ -31,5 +32,6 @@ public class MappingProfile : Profile
 		CreateMap<Performer, PerformersViewModel>();
 		CreateMap<Performer, PerformerDetailViewModel>()
 		.ForMember(dest => dest.MoviesPlayed, opt => opt.MapFrom(src => src.PerformersJoints.Select(x => x.Movie.Name)));
+		CreateMap<UpdatePerformerViewModel, Performer>();
 	}
 }

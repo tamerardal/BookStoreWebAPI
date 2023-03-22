@@ -1,6 +1,7 @@
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using static CreatePerformerCommand;
+using static UpdatePerformerCommand;
 
 [ApiController]
 [Route("[controller]s")]
@@ -15,6 +16,13 @@ public class PerformerController : ControllerBase
 		_mapper = mapper;
 	}
 	
+	[HttpGet]
+	public IActionResult GetPerformers()
+	{
+		GetPerformersQuery query = new GetPerformersQuery(_context, _mapper);
+	
+		return Ok(query.Handle());
+	}
 	[HttpGet("{id}")]
 	public IActionResult GetPerformerDetail(int id)
 	{
@@ -31,6 +39,25 @@ public class PerformerController : ControllerBase
 		command.Model = newPerformer;
 		
 		command.Handle();
+		return Ok();
+	}
+	[HttpDelete("{id}")]
+	public IActionResult DeletePerformer(int id)
+	{
+		DeletePerformerCommand command = new DeletePerformerCommand(_context);
+		command.PerformerId = id;
+		
+		command.Handle();
+		return Ok();
+	}
+	[HttpPut("{id}")]
+	public IActionResult UpdatePerformer(int id, [FromBody] UpdatePerformerViewModel updatedPerformer)
+	{
+		UpdatePerformerCommand command = new UpdatePerformerCommand(_context, _mapper);
+		command.PerformerId = id;
+		command.Model = updatedPerformer;
+		command.Handle();
+		
 		return Ok();
 	}
 }

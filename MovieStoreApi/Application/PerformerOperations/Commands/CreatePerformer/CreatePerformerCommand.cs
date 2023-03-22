@@ -19,7 +19,7 @@ public class CreatePerformerCommand
 		if (performer is not null)
 			throw new InvalidOperationException("Performer is already added!");
 			
-		var result = _mapper.Map<Performer>(Model);
+		performer = _mapper.Map<Performer>(Model);
 		
 		_context.Performers.Add(performer);
 		_context.SaveChanges();
