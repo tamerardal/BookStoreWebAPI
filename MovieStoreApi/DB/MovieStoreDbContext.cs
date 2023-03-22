@@ -11,6 +11,8 @@ public class MovieStoreDbContext : DbContext, IMovieStoreDbContext
 	public DbSet<Performer> Performers { get; set; }
 	public DbSet<Genre> Genres { get; set; }
 	public DbSet<Customer> Customers { get; set; }
+	public DbSet<PerformersJoint> PerformersJoint { get; set; }
+	
 	public override int SaveChanges()
 	{
 		return base.SaveChanges();
