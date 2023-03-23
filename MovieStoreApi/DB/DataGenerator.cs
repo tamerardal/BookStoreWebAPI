@@ -92,17 +92,6 @@ public class DataGenerator
 					Surname = "Ardal",
 					Email = "tamerardal@ardal.com",
 					Password = "123456",
-					PurchasesFilmId = 1,
-					FavGenreId = 3,
-				},
-				new Customer
-				{
-					Name = "Ali",
-					Surname = "Veli",
-					Email = "aliveli@ardal.com",
-					Password = "asdfgh",
-					PurchasesFilmId = 5,
-					FavGenreId = 1,
 				}
 			);
 			context.PerformersJoint.AddRange(

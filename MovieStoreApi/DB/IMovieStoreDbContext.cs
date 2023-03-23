@@ -8,5 +8,6 @@ public interface IMovieStoreDbContext
 	public DbSet<Genre> Genres { get; set; }
 	public DbSet<Customer> Customers { get; set; }
 	public DbSet<PerformersJoint> PerformersJoint { get; set; }
+	public DbSet<Order> Orders { get; set; }
 	int SaveChanges();
 }
