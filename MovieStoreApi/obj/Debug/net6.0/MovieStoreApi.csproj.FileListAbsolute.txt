@@ -45,3 +45,10 @@ C:\Users\tamer\Desktop\webapipractices\WebApi\moviestoreapi\obj\Debug\net6.0\ref
 C:\Users\tamer\Desktop\webapipractices\WebApi\moviestoreapi\obj\Debug\net6.0\MovieStoreApi.pdb
 C:\Users\tamer\Desktop\webapipractices\WebApi\moviestoreapi\obj\Debug\net6.0\MovieStoreApi.genruntimeconfig.cache
 C:\Users\tamer\Desktop\webapipractices\WebApi\moviestoreapi\obj\Debug\net6.0\ref\MovieStoreApi.dll
+C:\Users\tamer\Desktop\webapipractices\WebApi\moviestoreapi\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\tamer\Desktop\webapipractices\WebApi\moviestoreapi\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\tamer\Desktop\webapipractices\WebApi\moviestoreapi\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\tamer\Desktop\webapipractices\WebApi\moviestoreapi\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\tamer\Desktop\webapipractices\WebApi\moviestoreapi\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\tamer\Desktop\webapipractices\WebApi\moviestoreapi\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\tamer\Desktop\webapipractices\WebApi\moviestoreapi\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
