@@ -1,5 +1,3 @@
-using AutoMapper;
-
 public class RefreshTokenCommand
 {
 	public string RefreshToken { get; set; }
@@ -29,5 +27,4 @@ public class RefreshTokenCommand
 		else
 			throw new InvalidOperationException("Refresh Token couldn't found!");
 	}
-	public class RefreshTokenViewModel{}
 }

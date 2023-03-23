@@ -1,5 +1,8 @@
 using System.Reflection;
+using System.Text;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 
 internal class Program
 {
@@ -8,7 +11,22 @@ internal class Program
 		var builder = WebApplication.CreateBuilder(args);
 
 		// Add services to the container.
-
+		builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(
+			opt => 
+			{
+				opt.TokenValidationParameters = new TokenValidationParameters
+				{
+					ValidateAudience = true,
+					ValidateIssuer = true,
+					ValidateLifetime = true,
+					ValidateIssuerSigningKey = true,
+					ValidIssuer = builder.Configuration["Token:Issuer"],
+					ValidAudience = builder.Configuration["Token:Audience"],
+					IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Token:SecurityKey"])),
+					ClockSkew = TimeSpan.Zero
+				};
+			}
+		);
 		builder.Services.AddControllers();
 		builder.Services.AddDbContext<MovieStoreDbContext>(opt => opt.UseInMemoryDatabase(databaseName: "MovieStoreDB"));
 		builder.Services.AddScoped<IMovieStoreDbContext>(pro => pro.GetService<MovieStoreDbContext>());
