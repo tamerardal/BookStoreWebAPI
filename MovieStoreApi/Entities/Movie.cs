@@ -12,4 +12,5 @@ public class Movie
 	public Director Director { get; set; }
 	public double Price { get; set; }
 	public virtual ICollection<PerformersJoint> PerformersJoint { get; set; }
+	public bool IsActive { get; set; } = true;
 }

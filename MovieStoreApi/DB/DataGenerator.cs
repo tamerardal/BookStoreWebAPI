@@ -52,7 +52,7 @@ public class DataGenerator
 				new Movie{
 					Name = "The Godfather", 
 					GenreId = 6, DirectorId = 7, Price = 30,
-					ReleaseDate = new DateTime(1972, 1, 1), 
+					ReleaseDate = new DateTime(1972, 1, 1),
 					},
 				new Movie{
 					Name = "The Godfather 2", 

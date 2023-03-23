@@ -23,7 +23,8 @@ public class MappingProfile : Profile
 		CreateMap<Movie, MovieDetailViewModel>()
 		.ForMember(dest => dest.Genre, opt => opt.MapFrom(src => src.Genre.Name))
 		.ForMember(dest => dest.Director, opt => opt.MapFrom(src => src.Director.Name + " " + src.Director.Surname))
-		.ForMember(dest => dest.Performers, opt => opt.MapFrom(src => src.PerformersJoint.Select(x => x.Performer.Name + " " + x.Performer.Surname)));
+		.ForMember(dest => dest.Performers, opt => opt.MapFrom(src => src.PerformersJoint.Select(x => x.Performer.Name + " " + x.Performer.Surname)))
+		.ForMember(dest => dest.IsActive, opt => opt.MapFrom(src => src.IsActive));
 		CreateMap<UpdateMovieViewModel, Movie>();
 		
 		//Customer Mapping

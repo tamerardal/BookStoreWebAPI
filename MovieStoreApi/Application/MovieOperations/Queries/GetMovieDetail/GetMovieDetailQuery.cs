@@ -31,5 +31,6 @@ public class GetMovieDetailQuery
 		public string Director { get; set; }
 		public List<string> Performers { get; set; }
 		public double Price { get; set; }
+		public string IsActive { get; set; }
 	}
 }

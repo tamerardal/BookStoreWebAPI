@@ -15,7 +15,6 @@ public class DeleteOrderCommand
 	public void Handle()
 	{
 		var order = _context.Orders.SingleOrDefault(o => o.Id == OrderId);
-		
 		if (order is null)
 				throw new InvalidOperationException("ID's couldn't found!");
 

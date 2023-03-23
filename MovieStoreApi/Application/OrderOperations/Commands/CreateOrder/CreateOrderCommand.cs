@@ -24,6 +24,8 @@ public class CreateOrderCommand
 		result.IsActive = true;
 		result.TransactionTime = DateTime.Now;
 		
+		movie.IsActive = false;
+		
 		_context.Orders.Add(result);
 		_context.SaveChanges();
 	}
