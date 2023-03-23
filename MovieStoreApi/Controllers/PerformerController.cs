@@ -1,4 +1,5 @@
 using AutoMapper;
+using FluentValidation;
 using Microsoft.AspNetCore.Mvc;
 using static CreatePerformerCommand;
 using static UpdatePerformerCommand;
@@ -29,6 +30,9 @@ public class PerformerController : ControllerBase
 		GetPerformerDetailQuery query = new GetPerformerDetailQuery(_context, _mapper);
 		
 		query.PerformerId = id;
+		
+		GetPerformerDetailQueryValidator validator = new GetPerformerDetailQueryValidator();
+		validator.ValidateAndThrow(query);
 	
 		return Ok(query.Handle());
 	}
@@ -37,6 +41,9 @@ public class PerformerController : ControllerBase
 	{
 		CreatePerformerCommand command = new CreatePerformerCommand(_context, _mapper);
 		command.Model = newPerformer;
+		
+		CreatePerformerCommandValidator validator = new CreatePerformerCommandValidator();
+		validator.ValidateAndThrow(command);
 		
 		command.Handle();
 		return Ok();
@@ -56,6 +63,10 @@ public class PerformerController : ControllerBase
 		UpdatePerformerCommand command = new UpdatePerformerCommand(_context, _mapper);
 		command.PerformerId = id;
 		command.Model = updatedPerformer;
+		
+		UpdatePerformerCommandValidator validator = new UpdatePerformerCommandValidator();
+		validator.ValidateAndThrow(command);
+		
 		command.Handle();
 		
 		return Ok();

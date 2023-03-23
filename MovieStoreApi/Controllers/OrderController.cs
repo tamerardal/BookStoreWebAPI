@@ -1,4 +1,5 @@
 using AutoMapper;
+using FluentValidation;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using static CreateOrderCommand;
@@ -29,6 +30,10 @@ public class OrderController : ControllerBase
 	{
 		GetOrderDetailQuery query = new GetOrderDetailQuery(_context, _mapper);
 		query.OrderId = id;
+		
+		GetOrderDetailQueryValidator validator = new GetOrderDetailQueryValidator();
+		validator.ValidateAndThrow(query);
+
 		return Ok(query.Handle());
 	}
 	
@@ -37,6 +42,10 @@ public class OrderController : ControllerBase
 	{
 		CreateOrderCommand command = new CreateOrderCommand(_context, _mapper);
 		command.Model = newOrder;
+		
+		CreateOrderCommandValidator validator = new CreateOrderCommandValidator();
+		validator.ValidateAndThrow(command);
+		
 		command.Handle();
 		return Ok(); 
 	}
