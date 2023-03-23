@@ -51,6 +51,8 @@ internal class Program
 			app.UseSwaggerUI();
 		}
 
+		app.UseAuthentication();
+
 		app.UseHttpsRedirection();
 
 		app.UseAuthorization();

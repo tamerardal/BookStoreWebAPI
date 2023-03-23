@@ -7,4 +7,6 @@ public class Customer
 	public string Password { get; set; }
 	public virtual ICollection<Genre> FavGenre { get; set; }
 	public virtual ICollection<Order> Orders { get; set; }
+	public string RefreshToken { get; set; }
+	public DateTime? RefreshTokenExpireDate { get; set; }
 }

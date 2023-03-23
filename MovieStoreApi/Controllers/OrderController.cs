@@ -1,7 +1,8 @@
 using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using static CreateOrderCommand;
-
+[Authorize]
 [ApiController]
 [Route("[controller]s")]
 public class OrderController : ControllerBase
