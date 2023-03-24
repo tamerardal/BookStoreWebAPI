@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi.UnitTests", "Tests\W
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieStoreApi", "MovieStoreApi\MovieStoreApi.csproj", "{735A39AF-1FBD-474B-AD21-0C5C4628E746}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MagicStoreApi", "MagicStoreApi\MagicStoreApi.csproj", "{83C3BD41-664D-4FBA-B926-7635D2025608}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -32,6 +34,10 @@ Global
 		{735A39AF-1FBD-474B-AD21-0C5C4628E746}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{735A39AF-1FBD-474B-AD21-0C5C4628E746}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{735A39AF-1FBD-474B-AD21-0C5C4628E746}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83C3BD41-664D-4FBA-B926-7635D2025608}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83C3BD41-664D-4FBA-B926-7635D2025608}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83C3BD41-664D-4FBA-B926-7635D2025608}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83C3BD41-664D-4FBA-B926-7635D2025608}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{44920AED-AF73-445F-8CD2-51F6F77A09E0} = {E7E8625B-28A8-46C0-9283-C8BE40DFB1C4}

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\tamer\\Desktop\\webapipractices\\WebApi\\MovieStoreApi\\MovieStoreApi.csproj": {}
+    "c:\\Users\\tamer\\Desktop\\webapipractices\\WebApi\\MovieStoreApi\\MovieStoreApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\tamer\\Desktop\\webapipractices\\WebApi\\MovieStoreApi\\MovieStoreApi.csproj": {
+    "c:\\Users\\tamer\\Desktop\\webapipractices\\WebApi\\MovieStoreApi\\MovieStoreApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\tamer\\Desktop\\webapipractices\\WebApi\\MovieStoreApi\\MovieStoreApi.csproj",
+        "projectUniqueName": "c:\\Users\\tamer\\Desktop\\webapipractices\\WebApi\\MovieStoreApi\\MovieStoreApi.csproj",
         "projectName": "MovieStoreApi",
-        "projectPath": "C:\\Users\\tamer\\Desktop\\webapipractices\\WebApi\\MovieStoreApi\\MovieStoreApi.csproj",
+        "projectPath": "c:\\Users\\tamer\\Desktop\\webapipractices\\WebApi\\MovieStoreApi\\MovieStoreApi.csproj",
         "packagesPath": "C:\\Users\\tamer\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\tamer\\Desktop\\webapipractices\\WebApi\\MovieStoreApi\\obj\\",
+        "outputPath": "c:\\Users\\tamer\\Desktop\\webapipractices\\WebApi\\MovieStoreApi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
